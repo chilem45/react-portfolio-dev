@@ -3,7 +3,7 @@ import './App.css';
 import Navigationbar from './menu/Navigationbar';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
-import About from './pages/About';
+
 function App() {
   return (
     <div className="App">

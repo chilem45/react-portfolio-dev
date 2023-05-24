@@ -6,7 +6,7 @@ import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import About from './pages/About';
 function App() {
   return (
-    <div className="App">
+    <div className="App" style={{backgroundColor: 'blue'}}>
       <Router>
             <Navigationbar />
             <Switch>

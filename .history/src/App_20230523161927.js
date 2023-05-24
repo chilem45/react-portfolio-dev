@@ -3,16 +3,16 @@ import './App.css';
 import Navigationbar from './menu/Navigationbar';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
-import About from './pages/About';
+
 function App() {
   return (
     <div className="App">
       <Router>
             <Navigationbar />
             <Switch>
-                <Route exact path='/' component={About}/>
+                <Route exact path='/' component={Home}/>
                 <Route path='/about' component={About}/>
-                <Route path='/about' component={About}/>
+                <Route path='/about' component={Contact}/>
             </Switch>
         </Router>
     </div>
