@@ -9,17 +9,27 @@ import { Icon } from "@iconify/react";
 import { Col, Row } from "react-bootstrap";
 
 const Navigationbar = () => {
-  const expand = "md";
+  const expand = "lg";
   const heightsIcon = 22;
   const widthIcon = 22;
   return (
     <>
-      <Container fluid>
-        <Row>
-          <Col>
+      <Navbar
+        key={expand}
+        className={"mb-3" + style.navbar}
+        variant="dark"
+        expand={expand}
+      >
+        <Container fluid>
+          <Navbar.Brand href="#home">
             <ul class="nav">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">
+                <a
+                  class="nav-link active"
+                  id="facebookIcon"
+                  aria-current="page"
+                  href="#"
+                >
                   <Icon
                     icon="cib:facebook-f"
                     hFlip={true}
@@ -29,7 +39,12 @@ const Navigationbar = () => {
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">
+                <a
+                  class="nav-link active"
+                  id="instagramIcon"
+                  aria-current="page"
+                  href="#"
+                >
                   <Icon
                     icon="cib:instagram"
                     hFlip={true}
@@ -39,7 +54,12 @@ const Navigationbar = () => {
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">
+                <a
+                  class="nav-link active"
+                  id="githubIcon"
+                  aria-current="page"
+                  href="#"
+                >
                   <Icon
                     icon="cib:github"
                     hFlip={true}
@@ -49,8 +69,8 @@ const Navigationbar = () => {
                 </a>
               </li>
             </ul>
-          </Col>
-          <Col>
+          </Navbar.Brand>
+          <Navbar.Text>
             <ul class="nav justify-content-end">
               <li class="nav-item">
                 <a class="nav-link" href="#">
@@ -74,13 +94,15 @@ const Navigationbar = () => {
                 </a>
               </li>
             </ul>
-          </Col>
-        </Row>
-      </Container>
+          </Navbar.Text>
+        </Container>
+      </Navbar>
+
       <Navbar
         sticky="top"
         key={expand}
-        className={style.navbar}
+        className={"mb-3" + style.navbar}
+        variant="dark"
         expand={expand}
       >
         <Container fluid>
@@ -100,8 +122,8 @@ const Navigationbar = () => {
               <Nav className="justify-content-end flex-grow-1 pe-3">
                 <Nav.Link href="#action1">Accueil</Nav.Link>
                 <Nav.Link href="#action2">Services</Nav.Link>
-                <Nav.Link href="#action1">Compétences</Nav.Link>
-                <Nav.Link href="#action2">a propos</Nav.Link>
+                <Nav.Link href="#action3">Compétences</Nav.Link>
+                <Nav.Link href="#action4">A propos</Nav.Link>
               </Nav>
             </Offcanvas.Body>
           </Navbar.Offcanvas>
