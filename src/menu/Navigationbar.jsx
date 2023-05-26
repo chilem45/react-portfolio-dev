@@ -10,13 +10,14 @@ import { Col, Row } from "react-bootstrap";
 
 const Navigationbar = () => {
   const expand = "lg";
-  const heightsIcon = 22;
-  const widthIcon = 22;
+  const heightsIcon = 15;
+  const widthIcon = 15;
   return (
     <>
       <Navbar
         key={expand}
         className={"mb-3" + style.navbar}
+        id="firstNavbar"
         variant="dark"
         expand={expand}
       >
@@ -70,43 +71,44 @@ const Navigationbar = () => {
               </li>
             </ul>
           </Navbar.Brand>
-          <Navbar.Text>
-            <ul class="nav justify-content-end">
-              <li class="nav-item">
-                <a class="nav-link" href="#">
-                  <Icon
-                    icon="material-symbols:phone-enabled-outline"
-                    width={widthIcon}
-                    height={heightsIcon}
-                    hFlip={true}
-                  />
-                  <span>+509 3128-2122</span>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">
-                  <Icon
-                    icon="material-symbols:mail-outline"
-                    width={widthIcon}
-                    height={heightsIcon}
-                  />
-                  <span> chilemexantus@gmail.com</span>
-                </a>
-              </li>
-            </ul>
-          </Navbar.Text>
+            <Navbar.Text>
+              <ul class="nav justify-content-end">
+                <li class="nav-item">
+                  <a class="nav-link" href="#">
+                    <Icon
+                      icon="material-symbols:phone-enabled-outline"
+                      width={widthIcon}
+                      height={heightsIcon}
+                      hFlip={true}
+                    />
+                    <span>+509 3128-2122</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">
+                    <Icon
+                      icon="material-symbols:mail-outline"
+                      width={widthIcon}
+                      height={heightsIcon}
+                    />
+                    <span> chilemexantus@gmail.com</span>
+                  </a>
+                </li>
+              </ul>
+            </Navbar.Text>
         </Container>
       </Navbar>
 
       <Navbar
         sticky="top"
         key={expand}
+        id="secondNavbar"
         className={"mb-3" + style.navbar}
         variant="dark"
         expand={expand}
       >
         <Container fluid>
-          <Navbar.Brand href="#">Navbar Offcanvas</Navbar.Brand>
+          <Navbar.Brand href="#">B S C E</Navbar.Brand>
           <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
           <Navbar.Offcanvas
             id={`offcanvasNavbar-expand-${expand}`}

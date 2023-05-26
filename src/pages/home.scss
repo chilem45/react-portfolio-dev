@@ -1,4 +1,45 @@
-.carousel{
-    bottom: 200px;
-    
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 600px) {
+    .carousel {
+        width: 100%;
+        bottom: 33vh;
+
+        img {
+
+            height: 70vh;
+        }
+
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .carousel {
+        bottom: 20vh;
+        width: 100%;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .carousel {
+        bottom: 50vh;
+
+        img {
+            height: 128vh;
+        }
+
+        .carouselContainer {
+            margin-bottom: 14em;
+
+            h3 {
+                font-size: 5em;
+                text-transform: uppercase;
+            }
+
+            p {
+                font-size: 3em;
+            }
+        }
+    }
 }
