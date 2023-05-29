@@ -2,7 +2,7 @@ import React from "react";
 import style from "./home.scss";
 import Carousel from "react-bootstrap/Carousel";
 import { useRef, useEffect, useState } from "react";
-import gsap from "gsap";
+
 
 const Home = () => {
   const interval = 4000;
