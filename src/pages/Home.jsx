@@ -19,12 +19,7 @@ const Home = () => {
     if (currentSlide) {
       const headings = currentSlide.querySelectorAll("h3");
       const paragraphs = currentSlide.querySelectorAll("p");
-
-      gsap.fromTo(
-        [...headings, ...paragraphs],
-        { opacity: 0, y: 50 },
-        { opacity: 1, y: 0, duration: 0.75, stagger: 0.2 }
-      );
+      
     }
   }, [activeIndex]);
 
@@ -37,10 +32,11 @@ const Home = () => {
         activeIndex={activeIndex}
         onSelect={handleSelect}
         ref={myCarousel}
+        id="home"
       >
         <Carousel.Item interval={interval}>
           <img
-            className="d-block w-100 rounded"
+            className="d-block w-100 "
             src={process.env.PUBLIC_URL + "/images/geeks-2894621_640.jpg"}
             alt="First slide"
           />
@@ -55,7 +51,7 @@ const Home = () => {
         </Carousel.Item>
         <Carousel.Item interval={interval}>
           <img
-            className="d-block w-100 rounded"
+            className="d-block w-100 "
             src={process.env.PUBLIC_URL + "/images/laptop-1478822_640.jpg"}
             alt="Second slide"
           />
@@ -69,7 +65,7 @@ const Home = () => {
         </Carousel.Item>
         <Carousel.Item interval={interval}>
           <img
-            className="d-block w-100 rounded"
+            className="d-block w-100 "
             src={
               process.env.PUBLIC_URL + "/images/cup-of-coffee-1280537_640.jpg"
             }

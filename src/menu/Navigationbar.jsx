@@ -1,17 +1,25 @@
 import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
 import Form from "react-bootstrap/Form";
-import Nav from "react-bootstrap/Nav";
+import { Nav, NavLink } from "react-bootstrap";
 import Navbar from "react-bootstrap/Navbar";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import style from "./navigationStyles.scss";
 import { Icon } from "@iconify/react";
 import { Col, Row } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 const Navigationbar = () => {
   const expand = "lg";
   const heightsIcon = 15;
   const widthIcon = 15;
+
+  const scrollToComponent = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   return (
     <>
       <Navbar
@@ -71,31 +79,31 @@ const Navigationbar = () => {
               </li>
             </ul>
           </Navbar.Brand>
-            <Navbar.Text>
-              <ul class="nav justify-content-end">
-                <li class="nav-item">
-                  <a class="nav-link" href="#">
-                    <Icon
-                      icon="material-symbols:phone-enabled-outline"
-                      width={widthIcon}
-                      height={heightsIcon}
-                      hFlip={true}
-                    />
-                    <span>+509 3128-2122</span>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">
-                    <Icon
-                      icon="material-symbols:mail-outline"
-                      width={widthIcon}
-                      height={heightsIcon}
-                    />
-                    <span> chilemexantus@gmail.com</span>
-                  </a>
-                </li>
-              </ul>
-            </Navbar.Text>
+          <Navbar.Text>
+            <ul class="nav justify-content-end">
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <Icon
+                    icon="material-symbols:phone-enabled-outline"
+                    width={widthIcon}
+                    height={heightsIcon}
+                    hFlip={true}
+                  />
+                  <span>+509 3128-2122</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <Icon
+                    icon="material-symbols:mail-outline"
+                    width={widthIcon}
+                    height={heightsIcon}
+                  />
+                  <span> chilemexantus@gmail.com</span>
+                </a>
+              </li>
+            </ul>
+          </Navbar.Text>
         </Container>
       </Navbar>
 
@@ -122,10 +130,36 @@ const Navigationbar = () => {
             </Offcanvas.Header>
             <Offcanvas.Body>
               <Nav className="justify-content-end flex-grow-1 pe-3">
-                <Nav.Link href="#action1">Accueil</Nav.Link>
-                <Nav.Link href="#action2">Services</Nav.Link>
-                <Nav.Link href="#action3">Compétences</Nav.Link>
-                <Nav.Link href="#action4">A propos</Nav.Link>
+                <NavLink
+                  evenKey="1"
+                  onClick={() => scrollToComponent("home")}
+                >
+                  Accueil
+                </NavLink>
+                <NavLink
+                  evenKey="2"
+                  onClick={() => scrollToComponent("services")}
+                >
+                  Services
+                </NavLink>
+                <NavLink
+                  evenKey="3"
+                  onClick={() => scrollToComponent("competence")}
+                >
+                  Compétences
+                </NavLink>
+                <NavLink
+                  evenKey="4"
+                  onClick={() => scrollToComponent("apropos")}
+                >
+                  A propos
+                </NavLink>
+                <NavLink
+                  evenKey="5"
+                  onClick={() => scrollToComponent("apropos")}
+                >
+                  Contactez-moi
+                </NavLink>
               </Nav>
             </Offcanvas.Body>
           </Navbar.Offcanvas>
