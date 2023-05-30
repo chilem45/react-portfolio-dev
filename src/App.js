@@ -8,14 +8,11 @@ import Home from './pages/Home';
 function App() {
   return (
     <div className="App">
-
       <Router>
-
         <Navigationbar />
         <Route exact path='/' component={Home} />
       </Router>
-     <Services/>
-     <About2/>
+
     </div>
   );
 }

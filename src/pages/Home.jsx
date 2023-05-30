@@ -3,7 +3,6 @@ import style from "./home.scss";
 import Carousel from "react-bootstrap/Carousel";
 import { useRef, useEffect, useState } from "react";
 
-
 const Home = () => {
   const interval = 4000;
   const myCarousel = useRef(null);
@@ -19,7 +18,6 @@ const Home = () => {
     if (currentSlide) {
       const headings = currentSlide.querySelectorAll("h3");
       const paragraphs = currentSlide.querySelectorAll("p");
-      
     }
   }, [activeIndex]);
 
@@ -36,7 +34,7 @@ const Home = () => {
       >
         <Carousel.Item interval={interval}>
           <img
-            className="d-block w-100 "
+            className="d-block w-100"
             src={process.env.PUBLIC_URL + "/images/geeks-2894621_640.jpg"}
             alt="First slide"
           />
