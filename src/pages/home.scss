@@ -1,12 +1,13 @@
 /* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 760px) {
     .carousel {
         width: 100%;
-        bottom: 33vh;
+        bottom: 40vh;
 
         img {
 
             height: 70vh;
+            overflow: hidden;
         }
 
     }
@@ -15,8 +16,12 @@
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
     .carousel {
-        bottom: 20vh;
+        bottom: 30vh;
         width: 100%;
+        img {
+            height: 78vh;
+            overflow: hidden;
+        }
     }
 }
 
@@ -27,6 +32,7 @@
 
         img {
             height: 128vh;
+            overflow: hidden;
         }
 
         .carouselContainer {

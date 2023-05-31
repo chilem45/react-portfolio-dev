@@ -1,80 +1,267 @@
-#services {
-    bottom: 50vh;
-    border: none;
+#cardImgOverlay {
 
-    #MySvg {
-        border: none;
-        border-radius: 0;
-    }
-
-
-    #cardImgOverlay {
-
-        h4 {
-            font-size: 3em;
-            color: #000000;
-        }
-
-        h5 {
-            color: #000000;
-        }
-
-        p {
-            color: #636060;
-        }
-
-        #cardImgOverlay-p {
-            font-size: 2em;
-        }
-    }
-
-}
-
-.containerRow {
-    padding-top: 2%;
-
-    .iconService {
-        margin-top: 15px;
-        color: aqua;
-        width: 50px;
-        height: 50px;
-        border: 2px solid aqua;
-        padding: 3px;
-        border-radius: 30px;
+    h4 {
+        font-size: 3em;
+        color: #000000;
     }
 
     h5 {
-        font-size: 1.2em;
+        color: #000000;
     }
 
     p {
-        font-size: 1em;
+        color: #636060;
     }
 
-    .containerLeft {
-        padding-right: 3%;
-        text-align: right;
+    #cardImgOverlay-p {
+        font-size: 2em;
+    }
+}
 
-        .containerLeft-row {
-            padding-bottom: 3%;
-        }
+#col-image-lg2 {
+    margin-top: 20vh;
+}
 
-        p {
+.containerLeft {
+    text-align: right;
+}
 
-            padding-left: 20%;
-        }
+.containerRight {
+    text-align: left;
+}
+
+.iconService {
+    margin-top: 15px;
+    color: aqua;
+    width: 50px;
+    height: 50px;
+    border: 2px solid aqua;
+    padding: 5px;
+    border-radius: 30px;
+}
+
+h5,
+p {
+    font-size: 1em;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 319px) {
+
+    #col-image-lg2 {
+        display: none;
     }
 
-    .containerRight {
-        padding-left: 3%;
-        text-align: left;
+    #services {
+        bottom: 30vh;
+        border: none;
 
-        .containerRight-row {
-            padding-bottom: 3%;
+        .containerRow {
+            padding: 4%;
+            text-align: start;
+
+            h5,
+            p {
+                font-size: 15px;
+            }
+
+            #col-image-lg2 {
+                display: none;
+            }
+
+            .container-row-col-2-xm {
+                width: 10px;
+                margin-right: 20%;
+            }
+
+            .containerLeft,
+            .containerRight {
+                height: max-content;
+                text-align: justify;
+
+                .containerLeft-row,
+                .containerRight-row {
+                    height: 30%;
+                    margin-bottom: 5px;
+
+                    .container-row-col-2-xm {
+                        width: 10px;
+                    }
+
+                    .containerLeft-row-col-2-lg {
+                        display: none;
+                    }
+                }
+            }
         }
+    }
+}
 
-        p {
-            padding-right: 20%;
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width:320px) and (max-width: 539px) {
+    #col-image-lg2 {
+        display: none;
+    }
+
+    #services {
+        bottom: 30vh;
+        border: none;
+
+        .containerRow {
+            padding: 4%;
+            text-align: start;
+
+            #col-image-lg2 {
+                display: none;
+            }
+
+            .container-row-col-2-xm {
+                width: 10px;
+                margin-right: 10%;
+            }
+
+            .containerLeft,
+            .containerRight {
+                height: max-content;
+                text-align: justify;
+
+                .containerLeft-row,
+                .containerRight-row {
+                    height: 30%;
+                    margin-bottom: 5px;
+
+                    .container-row-col-2-xm {
+                        width: 10px;
+                    }
+
+                    .containerLeft-row-col-2-lg {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 540px) and (max-width: 990px) {
+    #services {
+        bottom: 30vh;
+        border: none;
+
+        .containerRow {
+            padding-top: 2%;
+            text-align: justify;
+
+            .containerLeft {
+                text-align: right;
+            }
+
+            .containerRight {
+                text-align: left;
+            }
+
+            .iconService {
+                margin-top: 15px;
+                color: aqua;
+                width: 50px;
+                height: 50px;
+                border: 2px solid aqua;
+                padding: 5px;
+                border-radius: 30px;
+            }
+
+            h5,
+            p {
+                font-size: 15px;
+            }
+
+            #col-image-lg2 {
+                display: none;
+            }
+
+            .container-row-col-2-xm {
+                width: 20px;
+                margin-right: 15%;
+            }
+
+            .containerLeft,
+            .containerRight {
+
+                .containerLeft-row {
+                    height: 30%;
+                    margin-right: 10%;
+
+                    .container-row-col-2-xm {
+                        display: none;
+                    }
+
+                    .containerLeft-row-col-2-lg {
+                        width: 20px;
+                    }
+
+                    padding-bottom: 3%;
+                }
+
+                p {
+                    padding-left: 5%;
+                }
+            }
+
+            .containerRight {
+                .containerRight-row {
+                    height: 30%;
+                    margin-left: 10%;
+                }
+
+                p {
+                    padding-right: 5%;
+                }
+            }
+        }
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    #services {
+        bottom: 50vh;
+        border: none;
+
+        .containerRow {
+            padding-top: 2%;
+
+            .containerLeft {
+
+                .containerLeft-row {
+                    height: 25%;
+
+                    .container-row-col-2-xm {
+                        display: none;
+                    }
+
+
+                    padding-bottom: 3%;
+                }
+
+                p {
+
+                    padding-left: 20%;
+                }
+            }
+
+            .containerRight {
+                padding-left: 3%;
+
+                .containerRight-row {
+                    height: 25%;
+                    padding-bottom: 3%;
+                }
+
+                p {
+                    padding-right: 20%;
+                }
+            }
         }
     }
 }

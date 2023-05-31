@@ -40,7 +40,7 @@ const Navigationbar = () => {
                   href="#"
                 >
                   <Icon
-                    icon="cib:facebook-f"
+                    icon="line-md:facebook"
                     hFlip={true}
                     width={widthIcon}
                     height={heightsIcon}
@@ -55,7 +55,7 @@ const Navigationbar = () => {
                   href="#"
                 >
                   <Icon
-                    icon="cib:instagram"
+                     icon="line-md:instagram" 
                     hFlip={true}
                     width={widthIcon}
                     height={heightsIcon}
@@ -70,8 +70,21 @@ const Navigationbar = () => {
                   href="#"
                 >
                   <Icon
-                    icon="cib:github"
+                   icon="line-md:github-loop"
                     hFlip={true}
+                    width={widthIcon}
+                    height={heightsIcon}
+                  />
+                </a>
+              </li> <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  id="githubIcon"
+                  aria-current="page"
+                  href="#"
+                >
+                  <Icon
+                  icon="line-md:linkedin" 
                     width={widthIcon}
                     height={heightsIcon}
                   />
@@ -95,7 +108,7 @@ const Navigationbar = () => {
               <li class="nav-item">
                 <a class="nav-link" href="#">
                   <Icon
-                    icon="material-symbols:mail-outline"
+                     icon="line-md:email" 
                     width={widthIcon}
                     height={heightsIcon}
                   />
