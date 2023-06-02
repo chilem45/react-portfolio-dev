@@ -31,7 +31,7 @@ const Navigationbar = () => {
       >
         <Container fluid>
           <Navbar.Brand href="#home">
-            <ul class="nav">
+            <ul class="nav Navbar-ul-01">
               <li class="nav-item">
                 <a
                   class="nav-link active"
@@ -55,7 +55,7 @@ const Navigationbar = () => {
                   href="#"
                 >
                   <Icon
-                     icon="line-md:instagram" 
+                    icon="line-md:instagram"
                     hFlip={true}
                     width={widthIcon}
                     height={heightsIcon}
@@ -70,13 +70,14 @@ const Navigationbar = () => {
                   href="#"
                 >
                   <Icon
-                   icon="line-md:github-loop"
+                    icon="line-md:github-loop"
                     hFlip={true}
                     width={widthIcon}
                     height={heightsIcon}
                   />
                 </a>
-              </li> <li class="nav-item">
+              </li>{" "}
+              <li class="nav-item">
                 <a
                   class="nav-link active"
                   id="githubIcon"
@@ -84,7 +85,7 @@ const Navigationbar = () => {
                   href="#"
                 >
                   <Icon
-                  icon="line-md:linkedin" 
+                    icon="line-md:linkedin"
                     width={widthIcon}
                     height={heightsIcon}
                   />
@@ -93,7 +94,7 @@ const Navigationbar = () => {
             </ul>
           </Navbar.Brand>
           <Navbar.Text>
-            <ul class="nav justify-content-end">
+            <ul class="nav justify-content-end Navbar-ul-02">
               <li class="nav-item">
                 <a class="nav-link" href="#">
                   <Icon
@@ -108,7 +109,7 @@ const Navigationbar = () => {
               <li class="nav-item">
                 <a class="nav-link" href="#">
                   <Icon
-                     icon="line-md:email" 
+                    icon="line-md:email"
                     width={widthIcon}
                     height={heightsIcon}
                   />
@@ -143,24 +144,22 @@ const Navigationbar = () => {
             </Offcanvas.Header>
             <Offcanvas.Body>
               <Nav className="justify-content-end flex-grow-1 pe-3">
-                <NavLink
-                  evenKey="1"
-                  onClick={() => scrollToComponent("home")}
-                >
+                <NavLink evenKey="1" onClick={() => scrollToComponent("home")}>
                   Accueil
                 </NavLink>
                 <NavLink
                   evenKey="2"
-                  onClick={() => scrollToComponent("services")}
-                >
-                  Services
-                </NavLink>
-                <NavLink
-                  evenKey="3"
                   onClick={() => scrollToComponent("competence")}
                 >
                   Compétences
                 </NavLink>
+                <NavLink
+                  evenKey="3"
+                  onClick={() => scrollToComponent("services")}
+                >
+                  Services
+                </NavLink>
+
                 <NavLink
                   evenKey="4"
                   onClick={() => scrollToComponent("apropos")}

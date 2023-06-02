@@ -6,10 +6,34 @@ $primary: #096cff;
 }
 
 #firstNavbar {
+    margin-top: -1.5%;
     background-color: #91969e00;
+    justify-content: center;
+    text-align: center;
     font-size: 13px;
+
     a {
         color: #ffffff;
+    }
+
+
+
+    .Navbar-ul-01 {
+        height: 1.5em;
+
+        li {
+            margin-left: -10%;
+        }
+    }
+
+    .Navbar-ul-02 {
+        font-size: 14px;
+        align-items: center;
+
+            margin-right: -2%;
+        li {
+            margin-left: -5%;
+        }
     }
 }
 

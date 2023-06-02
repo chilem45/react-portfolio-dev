@@ -1,7 +1,36 @@
 import { Container, Card, Row, Col } from "react-bootstrap";
 import style from "./services.scss";
 import { Icon } from "@iconify/react";
+import Aos from "aos";
+import "aos/dist/aos.css";
+import React, { useEffect, useState } from "react";
 const Services = () => {
+  const ElementH5 = ({ text }) => {
+    return (
+      <Row data-aos={"fade-up"}>
+        <h5>{text}</h5>
+      </Row>
+    );
+  };
+  const ElementP = ({ text }) => {
+    return (
+      <Row data-aos={"fade-down"}>
+        <p>{text}</p>
+      </Row>
+    );
+  };
+  const Rowicon = ({ icon, className }) => {
+    return (
+      <Col lg={2} className={className} data-aos={"flip-right"}>
+        <Icon className="iconService" icon={icon} />
+      </Col>
+    );
+  };
+
+  useEffect(() => {
+    Aos.init({ duration: 1000 });
+  }, []);
+
   return (
     <Card className="text-white" id="services">
       <Card.Img
@@ -10,76 +39,92 @@ const Services = () => {
         alt="Card image"
       />
       <Card.ImgOverlay id="cardImgOverlay">
-        <h4>MES SERVICES</h4>
-        <p id="cardImgOverlay-p">Des prestations adaptées à vos besoins</p>
+        <Row data-aos={"fade-down"}>
+          <h4>MES SERVICES</h4>
+        </Row>
+        <Row data-aos={"fade-up"}>
+          <p id="cardImgOverlay-p">Des prestations adaptées à vos besoins</p>
+        </Row>
         <Card.Text>
           <Row className="containerRow">
             <Col className="containerLeft">
               <Row className="containerLeft-row">
-                <Col lg={2} className="container-row-col-2-xm">
-                  <Icon className="iconService" icon="mdi:idea" />
-                </Col>
+                <Rowicon
+                  className={"container-row-col-2-xm"}
+                  icon={"mdi:idea"}
+                />
                 <Col>
-                  <h5>GESTION DE PROJETS WEB</h5>
-                  <p>
-                    Site vitrine, corporate, évènementiel, e-commerce, intranet,
-                    application mobile.
-                  </p>
-                </Col>
-                <Col lg={2} className="containerLeft-row-col-2-lg">
-                  <Icon className="iconService" icon="mdi:idea" />
-                </Col>
-              </Row>
-              <Row className="containerLeft-row">
-                <Col lg={2} className="container-row-col-2-xm">
-                  <Icon className="iconService" icon="lucide:edit" />
-                </Col>
-                <Col>
-                  <h5>INTÉGRATION WEB</h5>
-                  <p>
-                    Des intégrations (X)HTML / CSS respectueuses des standards
-                    du Web.
-                  </p>
-                </Col>
-                <Col lg={2} className="containerLeft-row-col-2-lg">
-                  <Icon className="iconService" icon="lucide:edit" />
-                </Col>
-              </Row>
-              <Row className="containerLeft-row">
-                <Col lg={2} className="container-row-col-2-xm">
-                  <Icon
-                    className="iconService"
-                    icon="streamline:interface-setting-wrench-crescent-tool-construction-tools-wrench-setting-edit-adjust"
+                  <ElementH5 text={`GESTION DE PROJETS WEB`} />
+                  <ElementP
+                    text={` Site vitrine, corporate, 
+                     évènementiel, e-commerce, intranet,  application mobile.`}
                   />
                 </Col>
+                <Rowicon
+                  className={"containerLeft-row-col-2-lg"}
+                  icon={"mdi:idea"}
+                />
+              </Row>
+              <Row className="containerLeft-row">
+                <Rowicon
+                  className={"container-row-col-2-xm"}
+                  icon={"lucide:edit"}
+                />
+
                 <Col>
-                  <h5>DÉVELOPPEMENTS SPÉCIFIQUES</h5>
-                  <p>
+                  <ElementH5 text={`INTÉGRATION WEB`} />
+                  <ElementP
+                    text={` Des intégrations (X)HTML / CSS respectueuses des standards
+                    du Web.`}
+                  />
+                </Col>
+                <Rowicon
+                  className={"containerLeft-row-col-2-lg"}
+                  icon={"lucide:edit"}
+                />
+              </Row>
+              <Row className="containerLeft-row">
+                <Rowicon
+                  className={"container-row-col-2-xm"}
+                  icon={
+                    "streamline:interface-setting-wrench-crescent-tool-construction-tools-wrench-setting-edit-adjust"
+                  }
+                />
+
+                <Col>
+                  <ElementH5 text={`DÉVELOPPEMENTS SPÉCIFIQUES`} />
+                  <ElementP
+                    text={`
                     Des outils adaptés à votre coeur de métier, applications &
-                    solutions personnalisées.
-                  </p>
-                </Col>
-                <Col lg={2} className="containerLeft-row-col-2-lg">
-                  <Icon
-                    className="iconService"
-                    icon="streamline:interface-setting-wrench-crescent-tool-construction-tools-wrench-setting-edit-adjust"
+                    solutions personnalisées.`}
                   />
                 </Col>
+                <Rowicon
+                  className={"containerLeft-row-col-2-lg"}
+                  icon={
+                    "streamline:interface-setting-wrench-crescent-tool-construction-tools-wrench-setting-edit-adjust"
+                  }
+                />
               </Row>
               <Row className="containerLeft-row">
-                <Col lg={2} className="container-row-col-2-xm">
-                  <Icon className="iconService" icon="raphael:checked" />
-                </Col>
+                <Rowicon
+                  className={"container-row-col-2-xm"}
+                  icon={"raphael:checked"}
+                />
+
                 <Col>
-                  <h5>RÉFÉRENCEMENT NATUREL</h5>
-                  <p>
+                  <ElementH5 text={`RÉFÉRENCEMENT NATUREL`} />
+                  <ElementP
+                    text={`
                     Affichage sémantique des informations, des pages propres
                     pour un référencement optimal.
-                  </p>
+                  `}
+                  />
                 </Col>
-                <Col lg={2} className="containerLeft-row-col-2-lg">
-                  <Icon className="iconService" icon="raphael:checked" />
-                </Col>
+                <Rowicon
+                  className={"containerLeft-row-col-2-lg"}
+                  icon={"raphael:checked"}
+                />
               </Row>
             </Col>
             <Col lg={2} id="col-image-lg2">
@@ -90,57 +135,60 @@ const Services = () => {
             </Col>
             <Col className="containerRight">
               <Row className="containerRight-row">
-                <Col lg={2} className="container-row-col-2-xm">
-                  <Icon className="iconService" icon="line-md:pencil" />
-                </Col>
+                <Rowicon
+                  className={"container-row-col-2-xm"}
+                  icon={"line-md:pencil"}
+                />
+
                 <Col>
-                  <h5>CONCEPTION GRAPHIQUE & WEBDESIGN</h5>
-                  <p>
+                  <ElementH5 text={`CONCEPTION GRAPHIQUE & WEBDESIGN`} />
+                  <ElementP
+                    text={`
                     Logos, templates Web, plaquettes publicitaires, cartes de
                     visite...
-                  </p>
-                </Col>
-              </Row>
-              <Row className="containerRight-row">
-                <Col lg={2} className="container-row-col-2-xm">
-                  <Icon className="iconService" icon="solar:refresh-outline" />
-                </Col>
-                <Col>
-                  <h5>DYNAMISME DES PAGES</h5>
-                  <p>
-                    Des animations de contenu non intrusives pour embellir votre
-                    projet.
-                  </p>
-                </Col>
-              </Row>
-              <Row className="containerRight-row">
-                <Col lg={2} className="container-row-col-2-xm">
-                  <Icon
-                    className="iconService"
-                    icon="icon-park-solid:setting"
+                  `}
                   />
                 </Col>
+              </Row>
+              <Row className="containerRight-row">
+                <Rowicon
+                  className={"container-row-col-2-xm"}
+                  icon={"solar:refresh-outline"}
+                />
+
                 <Col>
-                  <h5>INTERFACE D'ADMINISTRATION</h5>
-                  <p>
+                  <ElementH5 text={`DYNAMISME DES PAGES`} />
+                  <ElementP
+                    text={`Des animations de contenu non intrusives pour embellir votre
+                    projet.`}
+                  />
+                </Col>
+              </Row>
+              <Row className="containerRight-row">
+                <Rowicon
+                  className={"container-row-col-2-xm"}
+                  icon={"icon-park-solid:setting"}
+                />
+                <Col>
+                  <ElementH5 text={`INTERFACE D'ADMINISTRATION`} />
+                  <ElementP
+                    text={`
                     Outils spécifiques au bon fonctionnement de votre
-                    entreprise.
-                  </p>
+                    entreprise.`}
+                  />
                 </Col>
               </Row>
               <Row className="containerRight-row">
-                <Col lg={2} className="container-row-col-2-xm">
-                  <Icon
-                    className="iconService"
-                    icon="material-symbols:screen-rotation-up-rounded"
-                    rotate={3}
-                  />
-                </Col>
+                <Rowicon
+                  className={"container-row-col-2-xm"}
+                  icon={"material-symbols:screen-rotation-up-rounded"}
+                />
                 <Col>
-                  <h5>RESPONSIVE DESIGN</h5>
-                  <p>
-                    Compatible tous supports, tablette & application mobile.
-                  </p>
+                  <ElementH5 text={`RESPONSIVE DESIGN`} />
+                  <ElementP
+                    text={`
+                    Compatible tous supports, tablette & application mobile.`}
+                  />
                 </Col>
               </Row>
             </Col>

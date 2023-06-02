@@ -1,3 +1,19 @@
+/* services.scss */
+
+@keyframes fade {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .fade-in {
+    opacity: 0;
+    animation: fade 1s ease-in-out forwards;
+  }
+  
 #cardImgOverlay {
 
     h4 {
@@ -28,6 +44,7 @@
 
 .containerRight {
     text-align: left;
+    
 }
 
 .iconService {
