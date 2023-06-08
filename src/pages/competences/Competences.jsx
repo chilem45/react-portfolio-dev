@@ -1,0 +1,175 @@
+import React, { useEffect, useState } from "react";
+import { Container, Row, Col, Card } from "react-bootstrap";
+import { Icon } from "@iconify/react";
+import Aos from "aos";
+import "aos/dist/aos.css";
+import style from "./competences.scss";
+import PanelComponement from "./PanelComponent";
+import { ReactComponent as Bootstrap } from "./assets/bootstrap.svg";
+import { ReactComponent as ReactIcon } from "./assets/react.svg";
+import { ReactComponent as VueIcon } from "./assets/Vue.js.svg";
+import { ReactComponent as JqueryIcon } from "./assets/jquery.svg";
+import { ReactComponent as HtmlCssJs } from "./assets/html_css_js.svg";
+import { ReactComponent as Springboot } from "./assets/springboot.svg";
+import Rowicon from "../services/composant_frangement/RowIcon";
+import ElementH5 from "../services/composant_frangement/ElementH5";
+import ElementP from "../services/composant_frangement/ElementP";
+
+const Competences = () => {
+  useEffect(() => {
+    Aos.init({ duration: 2000 });
+  }, [Aos.duration]);
+  return (
+    <Container fluid id="competences">
+      <Container fluid id="competences-01-container">
+        <Row data-aos={"fade-down"}>
+          <h4>Mes Compétences</h4>
+        </Row>
+      </Container>
+      <Row className="containerRow">
+        <Col className="containerLeft">
+          <Row className="containerLeft-row">
+            <Rowicon
+              className={"container-row-col-2-xm"}
+              icon={"gg:radio-checked"}
+            />
+            <Col>
+              <ElementH5 text={`GESTION DE PROJETS WEB`} />
+              <ElementP
+                text={` Site vitrine, corporate, évènementiel, e-commerce, intranet, application mobile.`}
+              />
+            </Col>
+          </Row>
+          <Row className="containerLeft-row">
+            <Rowicon
+              className={"container-row-col-2-xm"}
+              icon={"gg:radio-checked"}
+            />
+
+            <Col>
+              <ElementH5 text={`CONCEPTION GRAPHIQUE & WEBDESIGN`} />
+              <ElementP
+                text={`Logos, templates Web, plaquettes publicitaires, cartes de visite, newsletters...`}
+              />
+            </Col>
+          </Row>
+          <Row className="containerLeft-row">
+            <Rowicon
+              className={"container-row-col-2-xm"}
+              icon={"gg:radio-checked"}
+            />
+
+            <Col>
+              <ElementH5
+                text={`APPLICATIONS SPÉCIFIQUES ET INTERFACE D'ADMINISTRATION`}
+              />
+              <ElementP
+                text={`
+                    Html, CSS, JS - Bootstrap - React.js - Vue.js - JQuery `}
+              />
+            </Col>
+          </Row>
+          <Row className="containerLeft-row">
+            <Rowicon
+              className={"container-row-col-2-xm"}
+              icon={"gg:radio-checked"}
+            />
+
+            <Col>
+              <ElementH5 text={`INTÉGRATION (X)HTML / CSS`} />
+              <ElementP
+                text={`
+                Codage à la main respectueux des standards du Web
+                  `}
+              />
+            </Col>
+          </Row>
+          <Row className="containerLeft-row">
+            <Rowicon
+              className={"container-row-col-2-xm"}
+              icon={"gg:radio-checked"}
+            />
+
+            <Col>
+              <ElementH5 text={`CONCEPTION MULTI-PLATEFORMES`} />
+              <ElementP
+                text={`
+                Compatible tous supports, tablette & application mobile  `}
+              />
+            </Col>
+          </Row>{" "}
+          <Row className="containerLeft-row">
+            <Rowicon
+              className={"container-row-col-2-xm"}
+              icon={"gg:radio-checked"}
+            />
+
+            <Col>
+              <ElementH5 text={`CONCEPTION MULTI-PLATEFORMES`} />
+              <ElementP
+                text={`
+                Compatible tous supports, tablette & application mobile  `}
+              />
+            </Col>
+          </Row>{" "}
+          <Row className="containerLeft-row">
+            <Rowicon
+              className={"container-row-col-2-xm"}
+              icon={"gg:radio-checked"}
+            />
+
+            <Col>
+              <ElementH5 text={`CONCEPTION MULTI-PLATEFORMES`} />
+              <ElementP
+                text={`
+                Compatible tous supports, tablette & application mobile  `}
+              />
+            </Col>
+          </Row>
+          <Row className="containerLeft-row">
+            <Rowicon
+              className={"container-row-col-2-xm"}
+              icon={"gg:radio-checked"}
+            />
+
+            <Col>
+              <ElementH5 text={`CONCEPTION MULTI-PLATEFORMES`} />
+              <ElementP
+                text={`
+                Compatible tous supports, tablette & application mobile  `}
+              />
+            </Col>
+          </Row>
+        </Col>
+        <Col className="containerRight" lg={7}>
+          <Row className="containerRight-row-header">
+            <ElementH5 text={`Frontend`} />
+          </Row>
+          <Row className="containerRight-row">
+            <PanelComponement SrcImage={HtmlCssJs} label={"HTML, CSS, JS"} />
+          </Row>
+          <Row className="containerRight-row">
+            <PanelComponement SrcImage={Bootstrap} label={"Bootstrap"} />
+          </Row>
+          <Row className="containerRight-row">
+            <PanelComponement SrcImage={JqueryIcon} label={"JQuery"} />
+          </Row>
+          <Row className="containerRight-row">
+            <PanelComponement SrcImage={VueIcon} label={"Vue.js"} />
+          </Row>
+          <Row className="containerRight-row">
+            <PanelComponement SrcImage={ReactIcon} label={"React.js"} />
+          </Row>
+          <Row className="containerRight-row-header">
+            <ElementH5 text={`Backend`} />
+          </Row>
+          <Row className="containerRight-row">
+            <PanelComponement SrcImage={Springboot} label={"Java(springboot"} />
+          </Row>
+        </Col>
+      </Row>
+    </Container>
+  );
+};
+
+export default Competences;

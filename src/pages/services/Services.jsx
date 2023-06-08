@@ -4,28 +4,11 @@ import { Icon } from "@iconify/react";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import React, { useEffect, useState } from "react";
+import Rowicon from "./composant_frangement/RowIcon";
+import ElementP from "./composant_frangement/ElementP";
+import ElementH5 from "./composant_frangement/ElementH5";
+
 const Services = () => {
-  const ElementH5 = ({ text }) => {
-    return (
-      <Row data-aos={"fade-up"}>
-        <h5>{text}</h5>
-      </Row>
-    );
-  };
-  const ElementP = ({ text }) => {
-    return (
-      <Row data-aos={"fade-down"}>
-        <p>{text}</p>
-      </Row>
-    );
-  };
-  const Rowicon = ({ icon, className }) => {
-    return (
-      <Col lg={2} className={className} data-aos={"flip-right"}>
-        <Icon className="iconService" icon={icon} />
-      </Col>
-    );
-  };
   useEffect(() => {
     Aos.init({ duration: 1000 });
   }, []);

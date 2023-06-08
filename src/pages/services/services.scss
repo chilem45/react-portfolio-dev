@@ -1,19 +1,5 @@
 /* services.scss */
 
-@keyframes fade {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
-  
-  .fade-in {
-    opacity: 0;
-    animation: fade 1s ease-in-out forwards;
-  }
-  
 #cardImgOverlay {
 
     h4 {
@@ -44,7 +30,7 @@
 
 .containerRight {
     text-align: left;
-    
+
 }
 
 .iconService {
@@ -62,7 +48,7 @@ p {
     font-size: 1em;
 }
 
-/* Extra small devices (phones, 600px and down) */
+/* Extra small devices (phones, 319px and down) */
 @media only screen and (max-width: 319px) {
 
     #col-image-lg2 {
@@ -70,7 +56,6 @@ p {
     }
 
     #services {
-        bottom: 30vh;
         border: none;
 
         .containerRow {
@@ -114,14 +99,13 @@ p {
     }
 }
 
-/* Small devices (portrait tablets and large phones, 600px and up) */
+/* Small devices (portrait tablets and large phones, 320px and up) */
 @media only screen and (min-width:320px) and (max-width: 539px) {
     #col-image-lg2 {
         display: none;
     }
 
     #services {
-        bottom: 30vh;
         border: none;
 
         .containerRow {
@@ -160,10 +144,10 @@ p {
     }
 }
 
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 540px) and (max-width: 990px) {
+/* Medium devices (landscape tablets, 540px and up) */
+@media only screen and (min-width: 540px) and (max-width: 991.9px) {
     #services {
-        bottom: 30vh;
+        margin-top: 10vh;
         border: none;
 
         .containerRow {
@@ -242,7 +226,7 @@ p {
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
     #services {
-        bottom: 50vh;
+        margin-bottom: 50vh;
         border: none;
 
         .containerRow {

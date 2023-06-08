@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import style from "./home.scss";
-import Carousel from "react-bootstrap/Carousel";
+import { Carousel, Row, Image } from "react-bootstrap";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const Home = () => {
   const interval = 5000;
@@ -30,6 +32,10 @@ const Home = () => {
     };
   }, [activeIndex]);
 
+  useEffect(() => {
+    Aos.init({ duration: 1000 });
+  }, []);
+
   const handleSelect = (selectedIndex, e) => {
     setActiveIndex(selectedIndex);
   };
@@ -45,44 +51,44 @@ const Home = () => {
         id="home"
       >
         <Carousel.Item interval={interval}>
-          <img
+          <Image
             className={`d-block w-100 ${activeIndex === 0 ? "zoom-in" : ""}`}
-            src={process.env.PUBLIC_URL + "/images/geeks-2894621_640.jpg"}
+            src={process.env.PUBLIC_URL + "/images/workspace-1280538.jpg"}
             alt="First slide"
           />
           <Carousel.Caption>
-            <div className="carouselContainer">
+            <Row className="carouselContainer">
               <p>B.S. Chilem Exantus</p>
-              <h3>Développeur informatique indépendant</h3>
-            </div>
+              <h3>Développeur informatique</h3>
+            </Row>
           </Carousel.Caption>
         </Carousel.Item>
+
         <Carousel.Item interval={interval}>
           <img
             className={`d-block w-100 ${activeIndex === 1 ? "zoom-in" : ""}`}
-            src={process.env.PUBLIC_URL + "/images/laptop-1478822_640.jpg"}
+            src={process.env.PUBLIC_URL + "/images/laptop-1478822.jpg"}
             alt="Second slide"
           />
-
           <Carousel.Caption>
-            <div className="carouselContainer" id="N02">
+            <Row className="carouselContainer" id="N02">
               <h3>Web design</h3> <h3>Conception graphique</h3>
               <p>Logo, plaquette publicitaire, carte de visite</p>
-            </div>
+            </Row>
           </Carousel.Caption>
         </Carousel.Item>
+
         <Carousel.Item interval={interval}>
           <img
             className={`d-block w-100 ${activeIndex === 2 ? "zoom-in" : ""}`}
-            src={process.env.PUBLIC_URL + "/images/cup-of-coffee-1280537_640.jpg"}
+            src={process.env.PUBLIC_URL + "/images/cup-of-coffee-1280537.jpg"}
             alt="Third slide"
           />
-
           <Carousel.Caption>
-            <div className="carouselContainer">
+            <Row className="carouselContainer">
               <h3>Creation de site web</h3>
               <p>site vitrine, corporate, évènementiel, e-commerce</p>
-            </div>
+            </Row>
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>

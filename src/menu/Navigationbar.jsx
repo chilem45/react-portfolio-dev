@@ -1,18 +1,16 @@
-import Button from "react-bootstrap/Button";
+import React, { useEffect } from "react";
 import Container from "react-bootstrap/Container";
-import Form from "react-bootstrap/Form";
 import { Nav, NavLink } from "react-bootstrap";
 import Navbar from "react-bootstrap/Navbar";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import style from "./navigationStyles.scss";
 import { Icon } from "@iconify/react";
-import { Col, Row } from "react-bootstrap";
-import { Link } from "react-router-dom";
-
+import Aos from "aos";
+import "aos/dist/aos.css";
 const Navigationbar = () => {
   const expand = "lg";
-  const heightsIcon = 15;
-  const widthIcon = 15;
+  const heightsIcon = 18;
+  const widthIcon = 18;
 
   const scrollToComponent = (id) => {
     const element = document.getElementById(id);
@@ -20,6 +18,10 @@ const Navigationbar = () => {
       element.scrollIntoView({ behavior: "smooth" });
     }
   };
+  useEffect(() => {
+    Aos.init({ duration: 1000 });
+  }, []);
+
   return (
     <>
       <Navbar
@@ -31,92 +33,60 @@ const Navigationbar = () => {
       >
         <Container fluid>
           <Navbar.Brand href="#home">
-            <ul class="nav Navbar-ul-01">
-              <li class="nav-item">
-                <a
-                  class="nav-link active"
-                  id="facebookIcon"
-                  aria-current="page"
-                  href="#"
-                >
-                  <Icon
-                    icon="line-md:facebook"
-                    hFlip={true}
-                    width={widthIcon}
-                    height={heightsIcon}
-                  />
-                </a>
-              </li>
-              <li class="nav-item">
-                <a
-                  class="nav-link active"
-                  id="instagramIcon"
-                  aria-current="page"
-                  href="#"
-                >
-                  <Icon
-                    icon="line-md:instagram"
-                    hFlip={true}
-                    width={widthIcon}
-                    height={heightsIcon}
-                  />
-                </a>
-              </li>
-              <li class="nav-item">
-                <a
-                  class="nav-link active"
-                  id="githubIcon"
-                  aria-current="page"
-                  href="#"
-                >
-                  <Icon
-                    icon="line-md:github-loop"
-                    hFlip={true}
-                    width={widthIcon}
-                    height={heightsIcon}
-                  />
-                </a>
-              </li>{" "}
-              <li class="nav-item">
-                <a
-                  class="nav-link active"
-                  id="githubIcon"
-                  aria-current="page"
-                  href="#"
-                >
-                  <Icon
-                    icon="line-md:linkedin"
-                    width={widthIcon}
-                    height={heightsIcon}
-                  />
-                </a>
-              </li>
-            </ul>
+            <Nav class="nav justify-content-start" id="nav-01">
+              <NavLink data-aos={"fade-down"} id="facebookIcon">
+                <Icon
+                  icon="line-md:facebook"
+                  hFlip={true}
+                  width={widthIcon}
+                  height={heightsIcon}
+                />
+              </NavLink>
+              <NavLink data-aos={"fade-up"} id="instagramIcon">
+                <Icon
+                  icon="line-md:instagram"
+                  hFlip={true}
+                  width={widthIcon}
+                  height={heightsIcon}
+                />
+              </NavLink>
+              <NavLink data-aos={"fade-down"} id="githubIcon">
+                <Icon
+                  icon="line-md:github-loop"
+                  hFlip={true}
+                  width={widthIcon}
+                  height={heightsIcon}
+                />
+              </NavLink>
+              <NavLink data-aos={"fade-up"} id="linkedinIcon">
+                <Icon
+                  icon="line-md:linkedin"
+                  width={widthIcon}
+                  height={heightsIcon}
+                />
+              </NavLink>
+            </Nav>
           </Navbar.Brand>
           <Navbar.Text>
-            <ul class="nav justify-content-end Navbar-ul-02">
-              <li class="nav-item">
-                <a class="nav-link" href="#">
-                  <Icon
-                    icon="material-symbols:phone-enabled-outline"
-                    width={widthIcon}
-                    height={heightsIcon}
-                    hFlip={true}
-                  />
-                  <span>+509 3128-2122</span>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">
-                  <Icon
-                    icon="line-md:email"
-                    width={widthIcon}
-                    height={heightsIcon}
-                  />
-                  <span> chilemexantus@gmail.com</span>
-                </a>
-              </li>
-            </ul>
+            <Nav class="nav justify-content-end" id="nav-02">
+              <NavLink data-aos={"fade-up"}>
+                <Icon
+                  icon="material-symbols:phone-enabled-outline"
+                  width={widthIcon}
+                  height={heightsIcon}
+                  hFlip={true}
+                />
+                <span>+509 3128-2122</span>
+              </NavLink>
+              <NavLink data-aos={"fade-down"}>
+                <Icon
+                  icon="line-md:email"
+                  width={widthIcon}
+                  height={heightsIcon}
+                />
+                <span> chilemexantus@gmail.com</span>
+              </NavLink>
+            </Nav>
           </Navbar.Text>
         </Container>
       </Navbar>
@@ -149,7 +119,7 @@ const Navigationbar = () => {
                 </NavLink>
                 <NavLink
                   evenKey="2"
-                  onClick={() => scrollToComponent("competence")}
+                  onClick={() => scrollToComponent("competences")}
                 >
                   Compétences
                 </NavLink>

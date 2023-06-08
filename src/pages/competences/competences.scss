@@ -1,0 +1,241 @@
+/* competences.scss */
+#competences {
+    z-index: 1;
+    text-align: justify;
+    height: max-content;
+    margin: auto;
+    margin-top: 15%;
+    margin-bottom: 5%;
+
+    .containerRight-row-header {
+        h5 {
+            text-transform: uppercase;
+            text-align: start;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size:x-large;
+            color: #636060;
+            margin: auto;
+        }
+
+    }
+
+    h4 {
+        color: #000000;
+        text-transform: uppercase;
+    }
+
+    .containerLeft {
+        text-align: left;
+        margin-right: 4%;
+
+        .iconService {
+            width: 30px;
+            height: 30px;
+            padding: 3px;
+            margin: auto;
+            margin-top: 15px;
+            color: rgb(149, 156, 156);
+            border-radius: 30px;
+            border: 2px solid aqua;
+
+        }
+    }
+
+    .containerRight {
+        text-align: end;
+
+    }
+
+    h5 {
+        font-size: medium;
+        color: #000000;
+    }
+
+    p {
+        color: #636060;
+    }
+}
+
+h5,
+p {
+    font-size: 1em;
+}
+
+#competences-01-container {
+    text-align: center;
+    margin-bottom: 2%;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 319px) {
+
+    #col-image-lg2 {
+        display: none;
+    }
+
+    #competences {
+        margin-top: -30vh;
+        margin-bottom: 20vh;
+
+        h4 {
+            font-size: 2em;
+            text-align: center;
+        }
+
+        .containerRow {
+            padding: 1%;
+            text-align: start;
+
+            .containerRight-row {
+                margin-right: -30%;
+            }
+
+            h5,
+            p {
+                font-size: 15px;
+            }
+
+            .container-row-col-2-xm {
+                width: 10px;
+                margin-right: 20%;
+            }
+
+            .containerLeft,
+            .containerRight {
+                height: max-content;
+                text-align: justify;
+
+                .containerLeft-row,
+                .containerRight-row {
+                    height: 30%;
+                    margin-bottom: 5px;
+
+                    .container-row-col-2-xm {
+                        width: 10px;
+                    }
+
+                    .containerLeft-row-col-2-lg {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width:320px) and (max-width: 539px) {
+    #col-image-lg2 {
+        display: none;
+    }
+
+    #competences {
+        margin-top: -40vh;
+
+        h4 {
+            font-size: 1.5em;
+            text-align: center;
+        }
+
+        h5 {
+            font-size: 15px;
+        }
+
+        p {
+            font-size: 12px;
+        }
+
+        .containerRow {
+            text-align: start;
+
+            .containerRight-row {
+                margin-right: -10%;
+            }
+
+            .containerLeft,
+            .containerRight {
+                height: max-content;
+                text-align: justify;
+
+                .containerLeft-row,
+                .containerRight-row {
+                    height: 30%;
+                    margin-bottom: 5px;
+
+                    .container-row-col-2-xm {
+                        width: 0;
+                        margin-right: 10%;
+                    }
+
+                    .containerLeft-row-col-2-lg {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 540px) and (max-width: 991.9px) {
+    #competences {
+        margin-top: -20vh;
+
+        .containerRow {
+            padding-top: 2%;
+            text-align: justify;
+
+            h4 {
+                font-size: 3em;
+                text-align: center;
+            }
+
+            h5,
+            p {
+                font-size: 15px;
+            }
+
+            .containerLeft {
+
+                text-align: left;
+                height: auto;
+
+                .containerLeft-row {
+                    margin-right: 10%;
+
+                    .container-row-col-2-xm {
+                        width: 20px;
+                        margin-right: 3%;
+                    }
+                }
+
+
+            }
+        }
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    #competences {
+        margin-top: -40vh;
+        border: none;
+
+        .containerRow {
+            margin-left: 1%;
+
+            .containerLeft {
+                height: auto;
+
+                .containerLeft-row {
+
+                    .container-row-col-2-xm {
+                        margin-right: -10%;
+
+                    }
+                }
+
+            }
+        }
+    }
+}

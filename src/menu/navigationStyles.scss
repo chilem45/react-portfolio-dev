@@ -1,39 +1,13 @@
 $primary_bg: #271c1c7a;
-$primary: #096cff;
+$primary_hover: #ffffff;
 
 .navbar {
     z-index: 999;
 }
 
-#firstNavbar {
-    margin-top: -1.5%;
-    background-color: #91969e00;
-    justify-content: center;
-    text-align: center;
-    font-size: 13px;
-
-    a {
-        color: #ffffff;
-    }
-
-
-
-    .Navbar-ul-01 {
-        height: 1.5em;
-
-        li {
-            margin-left: -10%;
-        }
-    }
-
-    .Navbar-ul-02 {
-        font-size: 14px;
-        align-items: center;
-
-            margin-right: -2%;
-        li {
-            margin-left: -5%;
-        }
+#nav-01{
+    a{
+        margin-left: -10%;
     }
 }
 
@@ -45,15 +19,34 @@ $primary: #096cff;
 }
 
 
+#facebookIcon {
+    color: #00a2ff;
 
-#facebookIcon:hover {
-    color: $primary;
+    :hover {
+        color: $primary_hover;
+    }
 }
 
-#instagramIcon:hover {
-    color: #d35b23ee;
+#instagramIcon {
+    color: #eb1313;
+
+    :hover {
+        color: $primary_hover;
+    }
 }
 
-#githubIcon:hover {
-    color: #08f54fee;
+#linkedinIcon {
+    color: rgb(0, 89, 255);
+
+    :hover {
+        color: $primary_hover;
+    }
+}
+
+#githubIcon {
+    color: rgb(255, 217, 0);
+    
+    :hover {
+        color: $primary_hover;
+    }
 }
