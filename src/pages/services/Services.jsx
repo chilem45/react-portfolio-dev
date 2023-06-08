@@ -26,11 +26,9 @@ const Services = () => {
       </Col>
     );
   };
-
   useEffect(() => {
     Aos.init({ duration: 1000 });
   }, []);
-
   return (
     <Card className="text-white" id="services">
       <Card.Img
