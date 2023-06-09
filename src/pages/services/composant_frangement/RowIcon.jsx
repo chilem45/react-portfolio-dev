@@ -8,7 +8,7 @@ const Rowicon = ({ icon, className }) => {
     Aos.init({ duration: 1000 });
   }, []);
   return (
-    <Col lg={2} className={className} data-aos={"flip-right"}>
+    <Col lg={2} className={className} >
       <Icon className="iconService" icon={icon} />
     </Col>
   );

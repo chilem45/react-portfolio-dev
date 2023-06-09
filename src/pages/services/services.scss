@@ -34,11 +34,12 @@
 }
 
 .iconService {
-    margin-top: 15px;
-    color: aqua;
     width: 50px;
     height: 50px;
-    border: 2px solid aqua;
+    margin: auto;
+    margin-top: 15px;
+    color: rgb(149, 156, 156);
+    border: 3px solid aqua;
     padding: 5px;
     border-radius: 30px;
 }
@@ -163,11 +164,13 @@ p {
             }
 
             .iconService {
+                margin: auto;
                 margin-top: 15px;
                 color: aqua;
+                border: 2px solid aqua;
                 width: 50px;
                 height: 50px;
-                border: 2px solid aqua;
+
                 padding: 5px;
                 border-radius: 30px;
             }

@@ -1,0 +1,17 @@
+.square {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform: rotate(45deg);
+}
+
+.row { 
+  display: flex;
+  justify-content: center;
+}
+
+.fragment {
+background-color: rgb(255, 147, 5); /* Changez la couleur de fond selon vos besoins */
+  margin-bottom: 0.5em; /* Espacement entre les fragments */
+}
+

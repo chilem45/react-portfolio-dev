@@ -1,52 +1,65 @@
-$primary_bg: #271c1c7a;
-$primary_hover: #ffffff;
+@import "../widgets/widget.scss";
 
 .navbar {
     z-index: 999;
+    height: 5vh;
+
 }
 
-#nav-01{
-    a{
-        margin-left: -10%;
-    }
-}
+
 
 #secondNavbar {
-    background-color: $primary_bg;
+    background-color: $primary;
     height: 10vh;
     font-size: 18px;
     font-weight: bold;
 }
 
 
-#facebookIcon {
-    color: #00a2ff;
 
-    :hover {
-        color: $primary_hover;
+#firstNavbar {
+    #nav-02 {
+        margin-left: -5%;
+        a {
+            color: black;
+            margin-left: -1%;
+            
+        }
     }
-}
-
-#instagramIcon {
-    color: #eb1313;
-
-    :hover {
-        color: $primary_hover;
+    #nav-01 {
+        a {
+            margin-left: -10%;
+        }
     }
-}
-
-#linkedinIcon {
-    color: rgb(0, 89, 255);
-
-    :hover {
-        color: $primary_hover;
-    }
-}
-
-#githubIcon {
-    color: rgb(255, 217, 0);
+    #facebookIcon {
+        color: #00a2ff;
     
-    :hover {
-        color: $primary_hover;
+        :hover {
+            color: $bg;
+        }
+    }
+    
+    #instagramIcon {
+        color: #f704ff;
+    
+        :hover {
+            color: $bg;
+        }
+    }
+    
+    #linkedinIcon {
+        color: rgb(0, 89, 255);
+    
+        :hover {
+            color: $bg;
+        }
+    }
+    
+    #githubIcon {
+        color: rgb(255, 217, 0);
+    
+        :hover {
+            color: $bg;
+        }
     }
 }

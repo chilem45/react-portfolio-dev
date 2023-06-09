@@ -7,7 +7,7 @@ const ElementP = ({ text }) => {
     Aos.init({ duration: 1000 });
   }, []);
   return (
-    <Row data-aos={"fade-down"}>
+    <Row >
       <p>{text}</p>
     </Row>
   );

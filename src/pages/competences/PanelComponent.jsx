@@ -6,7 +6,7 @@ import { Col, Row } from "react-bootstrap";
 import SlowProgressBar from "./SlowProgressBar";
 import style from "./panelComponent.scss";
 
-const PanelComponement = ({ SrcImage, label, classNameLabel }) => {
+const PanelComponement = ({ SrcImage, label, classNameLabel,niveau }) => {
   return (
     <>
       <Row className="panelComponent">
@@ -17,7 +17,7 @@ const PanelComponement = ({ SrcImage, label, classNameLabel }) => {
           <p className={classNameLabel}>{label}</p>
         </Col>
         <Col className="panelComponent-col-progressBar" lg={6}>
-          <SlowProgressBar value={70} className="panelComponent-col-progressBar-bar"/>
+          <SlowProgressBar value={niveau} className="panelComponent-col-progressBar-bar"/>
         </Col>
       </Row>
     </>

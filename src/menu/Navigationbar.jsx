@@ -25,6 +25,7 @@ const Navigationbar = () => {
   return (
     <>
       <Navbar
+      fixed="bottom"
         key={expand}
         className={"mb-3" + style.navbar}
         id="firstNavbar"
@@ -34,7 +35,7 @@ const Navigationbar = () => {
         <Container fluid>
           <Navbar.Brand href="#home">
             <Nav class="nav justify-content-start" id="nav-01">
-              <NavLink data-aos={"fade-down"} id="facebookIcon">
+              <NavLink  id="facebookIcon">
                 <Icon
                   icon="line-md:facebook"
                   hFlip={true}
@@ -42,7 +43,7 @@ const Navigationbar = () => {
                   height={heightsIcon}
                 />
               </NavLink>
-              <NavLink data-aos={"fade-up"} id="instagramIcon">
+              <NavLink  id="instagramIcon">
                 <Icon
                   icon="line-md:instagram"
                   hFlip={true}
@@ -50,7 +51,7 @@ const Navigationbar = () => {
                   height={heightsIcon}
                 />
               </NavLink>
-              <NavLink data-aos={"fade-down"} id="githubIcon">
+              <NavLink  id="githubIcon">
                 <Icon
                   icon="line-md:github-loop"
                   hFlip={true}
@@ -58,7 +59,7 @@ const Navigationbar = () => {
                   height={heightsIcon}
                 />
               </NavLink>
-              <NavLink data-aos={"fade-up"} id="linkedinIcon">
+              <NavLink  id="linkedinIcon">
                 <Icon
                   icon="line-md:linkedin"
                   width={widthIcon}
@@ -69,7 +70,7 @@ const Navigationbar = () => {
           </Navbar.Brand>
           <Navbar.Text>
             <Nav class="nav justify-content-end" id="nav-02">
-              <NavLink data-aos={"fade-up"}>
+              <NavLink >
                 <Icon
                   icon="material-symbols:phone-enabled-outline"
                   width={widthIcon}
@@ -78,7 +79,7 @@ const Navigationbar = () => {
                 />
                 <span>+509 3128-2122</span>
               </NavLink>
-              <NavLink data-aos={"fade-down"}>
+              <NavLink >
                 <Icon
                   icon="line-md:email"
                   width={widthIcon}
@@ -92,7 +93,6 @@ const Navigationbar = () => {
       </Navbar>
 
       <Navbar
-        sticky="top"
         key={expand}
         id="secondNavbar"
         className={"mb-3" + style.navbar}
@@ -128,13 +128,6 @@ const Navigationbar = () => {
                   onClick={() => scrollToComponent("services")}
                 >
                   Services
-                </NavLink>
-
-                <NavLink
-                  evenKey="4"
-                  onClick={() => scrollToComponent("apropos")}
-                >
-                  A propos
                 </NavLink>
                 <NavLink
                   evenKey="5"

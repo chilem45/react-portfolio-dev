@@ -5,10 +5,15 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 import style from "./competences.scss";
 import PanelComponement from "./PanelComponent";
-import { ReactComponent as Bootstrap } from "./assets/bootstrap.svg";
-import { ReactComponent as ReactIcon } from "./assets/react.svg";
+
+import { ReactComponent as Php } from "./assets/php.svg";
+import { ReactComponent as Figma } from "./assets/figma.svg";
 import { ReactComponent as VueIcon } from "./assets/Vue.js.svg";
+import { ReactComponent as ReactIcon } from "./assets/react.svg";
+import { ReactComponent as JavaEE } from "./assets/java-icon.svg";
+import { ReactComponent as AdobeXd } from "./assets/adobe-xd.svg";
 import { ReactComponent as JqueryIcon } from "./assets/jquery.svg";
+import { ReactComponent as Bootstrap } from "./assets/bootstrap.svg";
 import { ReactComponent as HtmlCssJs } from "./assets/html_css_js.svg";
 import { ReactComponent as Springboot } from "./assets/springboot.svg";
 import Rowicon from "../services/composant_frangement/RowIcon";
@@ -28,18 +33,6 @@ const Competences = () => {
       </Container>
       <Row className="containerRow">
         <Col className="containerLeft">
-          <Row className="containerLeft-row">
-            <Rowicon
-              className={"container-row-col-2-xm"}
-              icon={"gg:radio-checked"}
-            />
-            <Col>
-              <ElementH5 text={`GESTION DE PROJETS WEB`} />
-              <ElementP
-                text={` Site vitrine, corporate, évènementiel, e-commerce, intranet, application mobile.`}
-              />
-            </Col>
-          </Row>
           <Row className="containerLeft-row">
             <Rowicon
               className={"container-row-col-2-xm"}
@@ -65,7 +58,7 @@ const Competences = () => {
               />
               <ElementP
                 text={`
-                    Html, CSS, JS - Bootstrap - React.js - Vue.js - JQuery `}
+                    Html - CSS - JS - Bootstrap - React.js - Vue.js - JQuery `}
               />
             </Col>
           </Row>
@@ -91,13 +84,13 @@ const Competences = () => {
             />
 
             <Col>
-              <ElementH5 text={`CONCEPTION MULTI-PLATEFORMES`} />
+              <ElementH5 text={`CREATION D'API`} />
               <ElementP
-                text={`
-                Compatible tous supports, tablette & application mobile  `}
+                text={`développer une interface qui permet à différentes applications
+                 d'échanger des informations entre elles de manière organisée. `}
               />
             </Col>
-          </Row>{" "}
+          </Row>
           <Row className="containerLeft-row">
             <Rowicon
               className={"container-row-col-2-xm"}
@@ -105,19 +98,18 @@ const Competences = () => {
             />
 
             <Col>
-              <ElementH5 text={`CONCEPTION MULTI-PLATEFORMES`} />
+              <ElementH5 text={`INTEGRATION API`} />
               <ElementP
-                text={`
-                Compatible tous supports, tablette & application mobile  `}
+                text={`créer une liaison et d'établir un échange de
+                 données entre différentes applications ou systèmes.`}
               />
             </Col>
-          </Row>{" "}
+          </Row>
           <Row className="containerLeft-row">
             <Rowicon
               className={"container-row-col-2-xm"}
               icon={"gg:radio-checked"}
             />
-
             <Col>
               <ElementH5 text={`CONCEPTION MULTI-PLATEFORMES`} />
               <ElementP
@@ -131,13 +123,9 @@ const Competences = () => {
               className={"container-row-col-2-xm"}
               icon={"gg:radio-checked"}
             />
-
             <Col>
-              <ElementH5 text={`CONCEPTION MULTI-PLATEFORMES`} />
-              <ElementP
-                text={`
-                Compatible tous supports, tablette & application mobile  `}
-              />
+              <ElementH5 text={`VALIDATION W3C, RÉFÉRENCEMENT NATUREL SEO`} />
+              <ElementP text={`Accessibilité & ergonomie des pages web`} />
             </Col>
           </Row>
         </Col>
@@ -146,25 +134,64 @@ const Competences = () => {
             <ElementH5 text={`Frontend`} />
           </Row>
           <Row className="containerRight-row">
-            <PanelComponement SrcImage={HtmlCssJs} label={"HTML, CSS, JS"} />
+            <PanelComponement
+              SrcImage={HtmlCssJs}
+              niveau={95}
+              label={"HTML, CSS, JS"}
+            />
           </Row>
           <Row className="containerRight-row">
-            <PanelComponement SrcImage={Bootstrap} label={"Bootstrap"} />
+            <PanelComponement
+              SrcImage={Bootstrap}
+              niveau={90}
+              label={"Bootstrap"}
+            />
           </Row>
           <Row className="containerRight-row">
-            <PanelComponement SrcImage={JqueryIcon} label={"JQuery"} />
+            <PanelComponement
+              SrcImage={JqueryIcon}
+              niveau={80}
+              label={"JQuery"}
+            />
           </Row>
           <Row className="containerRight-row">
-            <PanelComponement SrcImage={VueIcon} label={"Vue.js"} />
+            <PanelComponement SrcImage={VueIcon} niveau={70} label={"Vue.js"} />
           </Row>
           <Row className="containerRight-row">
-            <PanelComponement SrcImage={ReactIcon} label={"React.js"} />
+            <PanelComponement
+              SrcImage={ReactIcon}
+              niveau={80}
+              label={"React.js"}
+            />
           </Row>
           <Row className="containerRight-row-header">
             <ElementH5 text={`Backend`} />
           </Row>
           <Row className="containerRight-row">
-            <PanelComponement SrcImage={Springboot} label={"Java(springboot"} />
+            <PanelComponement
+              SrcImage={Springboot}
+              niveau={70}
+              label={"Java(springboot)"}
+            />
+          </Row>
+          <Row className="containerRight-row">
+            <PanelComponement SrcImage={JavaEE} niveau={65} label={"Java EE"} />
+          </Row>
+          <Row className="containerRight-row">
+            <PanelComponement SrcImage={Php} niveau={60} label={"PHP"} />
+          </Row>
+          <Row className="containerRight-row-header">
+            <ElementH5 text={`UI DESIGN`} />
+          </Row>
+          <Row className="containerRight-row">
+            <PanelComponement SrcImage={Figma} niveau={70} label={"Figma"} />
+          </Row>
+          <Row className="containerRight-row">
+            <PanelComponement
+              SrcImage={AdobeXd}
+              niveau={70}
+              label={"Adobe XD"}
+            />
           </Row>
         </Col>
       </Row>

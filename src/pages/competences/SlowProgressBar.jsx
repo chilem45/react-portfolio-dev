@@ -20,12 +20,10 @@ const SlowProgressBar = ({ value, className, id }) => {
   }, [value]);
   return (
     <ProgressBar
-      striped
-      variant="info"
-      style={{ borderRadius: 0}}
+    variant="danger"
       now={progress}
+      visuallyHidden
       label={`${progress}%`}
-      animated
       max={100}
       className={className}
       id={id} 

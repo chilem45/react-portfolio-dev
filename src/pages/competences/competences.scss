@@ -4,17 +4,17 @@
     text-align: justify;
     height: max-content;
     margin: auto;
-    margin-top: 15%;
-    margin-bottom: 5%;
 
     .containerRight-row-header {
         h5 {
             text-transform: uppercase;
             text-align: start;
             font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-            font-size:x-large;
+            font-size: x-large;
             color: #636060;
             margin: auto;
+            margin-bottom: 1%;
+            margin-top: 1%;
         }
 
     }
@@ -25,6 +25,7 @@
     }
 
     .containerLeft {
+        height: auto;
         text-align: left;
         margin-right: 4%;
 
@@ -33,7 +34,7 @@
             height: 30px;
             padding: 3px;
             margin: auto;
-            margin-top: 15px;
+            margin-left: -5px;
             color: rgb(149, 156, 156);
             border-radius: 30px;
             border: 2px solid aqua;
@@ -42,6 +43,7 @@
     }
 
     .containerRight {
+        height: auto;
         text-align: end;
 
     }
@@ -58,7 +60,7 @@
 
 h5,
 p {
-    font-size: 1em;
+    font-size:medium;
 }
 
 #competences-01-container {
@@ -74,8 +76,6 @@ p {
     }
 
     #competences {
-        margin-top: -30vh;
-        margin-bottom: 20vh;
 
         h4 {
             font-size: 2em;
@@ -130,20 +130,13 @@ p {
     }
 
     #competences {
-        margin-top: -40vh;
 
         h4 {
             font-size: 1.5em;
             text-align: center;
         }
 
-        h5 {
-            font-size: 15px;
-        }
 
-        p {
-            font-size: 12px;
-        }
 
         .containerRow {
             text-align: start;
@@ -179,10 +172,8 @@ p {
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 540px) and (max-width: 991.9px) {
     #competences {
-        margin-top: -20vh;
 
         .containerRow {
-            padding-top: 2%;
             text-align: justify;
 
             h4 {
@@ -190,15 +181,12 @@ p {
                 text-align: center;
             }
 
-            h5,
-            p {
-                font-size: 15px;
-            }
+
 
             .containerLeft {
 
                 text-align: left;
-                height: auto;
+                
 
                 .containerLeft-row {
                     margin-right: 10%;
@@ -218,14 +206,21 @@ p {
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
     #competences {
-        margin-top: -40vh;
         border: none;
+
+        h4 {
+            font-size: 2em;
+            text-align: center;
+        }
 
         .containerRow {
             margin-left: 1%;
 
+            .containerRight {
+                margin-top: -1.7%;
+            }
+
             .containerLeft {
-                height: auto;
 
                 .containerLeft-row {
 

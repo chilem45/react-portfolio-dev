@@ -1,8 +1,24 @@
-.panelComponent{
-.panelComponent-col-progressBar-bar {
-    background-color: rgba(172, 172, 179, 0.89);
+@import "../../widgets/widget.scss";
+
+.panelComponent {
+    .panelComponent-col-progressBar-bar {
+        background-color: $primary;
+        height: 6vh;
+        border-bottom-right-radius: 9vh;
+        border-top-right-radius: 9vh;
+    }
+
+    .panelComponent-col-label {
+        background-color: $secondary;
+        border-right: 3px double rgb(243, 40, 40);
+    }
+
+    .panelComponent-col-icon {
+        background-color: $bg;
+
+    }
 }
-}
+
 /* Extra small devices (phones, 319px and down) */
 @media only screen and (max-width: 319px) {
     .panelComponent {
@@ -10,47 +26,40 @@
         text-align: end;
 
         .panelComponent-col-icon {
-            background-color: aqua;
             display: flex;
             align-items: center;
             justify-content: center;
-            height: 7vh;
-            width: 7vh;
-            border-radius: 7vh;
+            height: 9vh;
+            width: 9vh;
+            border-radius: 9vh;
             margin: auto;
             margin-right: -1%;
             z-index: 1;
         }
 
         .panelComponent-col-label {
-            background-color: #dfd7d7;
-            box-shadow: 2px 2px 2px rgba(138, 136, 136, 0.781);
             width: 40%;
             height: 6vh;
             line-height: 6vh;
-            border-radius: 20px 0 0 15px;
             margin: auto;
             margin-left: -1%;
             margin-right: -1%;
 
 
             p {
-                padding-left: 5%;
+                padding-left: -1%;
             }
         }
 
         .panelComponent-col-progressBar {
             margin: auto;
-            width: 30%;
+            width: 35%;
             margin-left: -3%;
             z-index: -1;
-
-            .panelComponent-col-progressBar-bar {
-                height: 6vh;
-            }
         }
     }
 }
+
 /* Small devices (portrait tablets and large phones, 539px and up) */
 @media only screen and (min-width:320px) and (max-width: 539px) {
     .panelComponent {
@@ -58,31 +67,27 @@
         text-align: end;
 
         .panelComponent-col-icon {
-            background-color: aqua;
             display: flex;
             align-items: center;
             justify-content: center;
-            height: 7vh;
-            width: 7vh;
-            border-radius: 7vh;
+            height: 8vh;
+            width: 8vh;
+            border-radius: 8vh;
             margin: auto;
             margin-right: -1%;
             z-index: 1;
         }
 
         .panelComponent-col-label {
-            background-color: #dfd7d7;
-            box-shadow: 2px 2px 2px rgba(138, 136, 136, 0.781);
-            width: 30%;
+            width: 33%;
             height: 6vh;
-            border-radius: 20px 0 0 15px;
             margin: auto;
             margin-left: -1%;
             margin-right: -1%;
             line-height: 6vh;
 
             p {
-                padding-left: 5%;
+                padding-left: -2%;
             }
         }
 
@@ -91,10 +96,6 @@
             width: 55%;
             margin-left: -3%;
             z-index: -1;
-
-            .panelComponent-col-progressBar-bar {
-                height: 6vh;
-            }
         }
     }
 }
@@ -106,7 +107,6 @@
         text-align: end;
 
         .panelComponent-col-icon {
-            background-color: aqua;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -114,20 +114,16 @@
             width: 10vh;
             margin: auto;
             margin-right: -1%;
-            border-radius: 7vh;
+            border-radius: 10vh;
             z-index: 1;
         }
 
         .panelComponent-col-label {
-            background-color: #dfd7d7;
-            box-shadow: 2px 2px 2px rgba(138, 136, 136, 0.781);
             width: 30%;
             height: 6vh;
-            border-radius: 20px 0 0 15px;
             margin: auto;
             margin-left: -1%;
-            ;
-            margin-right: -1%;
+            margin-right: -2%;
             line-height: 6vh;
 
             p {
@@ -140,10 +136,6 @@
             width: 60%;
             margin-left: -3%;
             z-index: -1;
-
-            .panelComponent-col-progressBar-bar {
-                height: 6vh;
-            }
         }
     }
 }
@@ -151,42 +143,34 @@
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
     .panelComponent {
-        height: 11vh;
+        height: 8vh;
 
         .panelComponent-col-icon {
-            background-color: aqua;
             display: flex;
             align-items: center;
             justify-content: center;
-            height: 7vh;
-            width: 7vh;
+            height: 9vh;
+            width: 9vh;
             margin: auto;
-            margin-right: -1%;
-            border-radius: 7vh;
+            margin-right: -3%;
+            border-top-right-radius: 9vh;
+            border-bottom-right-radius: 9vh;
             z-index: 1;
         }
 
         .panelComponent-col-label {
-            background-color: #dfd7d7;
-            box-shadow: 2px 2px 2px rgba(138, 136, 136, 0.781);
             width: 30%;
             height: 6vh;
-            border-radius: 20px 0 0 15px;
             margin: auto;
             margin-left: -0.5%;
-            margin-right: -1%;
+            margin-right: -3%;
             line-height: 6vh;
         }
 
         .panelComponent-col-progressBar {
             margin: auto;
-            margin-left: -3%; 
+            margin-left: -2%;
             z-index: -1;
-
-            .panelComponent-col-progressBar-bar {
-                height: 6vh;
-                
-            }
         }
     }
 }
