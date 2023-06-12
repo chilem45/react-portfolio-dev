@@ -1,52 +1,54 @@
 /* services.scss */
+#services {
+    
+    #cardImgOverlay {
 
-#cardImgOverlay {
+        h4 {
+            font-size: 3em;
+            color: #000000;
+        }
 
-    h4 {
-        font-size: 3em;
-        color: #000000;
+        h5 {
+            color: #000000;
+        }
+
+        p {
+            color: #636060;
+        }
+
+        #cardImgOverlay-p {
+            font-size: 2em;
+        }
     }
 
-    h5 {
-        color: #000000;
+    #col-image-lg2 {
+        margin-top: 20vh;
     }
 
+    .containerLeft {
+        text-align: right;
+    }
+
+    .containerRight {
+        text-align: left;
+
+    }
+
+    .iconService {
+        width: 50px;
+        height: 50px;
+        margin: auto;
+        margin-top: 15px;
+        color: rgb(149, 156, 156);
+        border: 3px solid aqua;
+        padding: 5px;
+        border-radius: 30px;
+    }
+
+    h5,
     p {
-        color: #636060;
+        font-size: 1em;
     }
-
-    #cardImgOverlay-p {
-        font-size: 2em;
-    }
-}
-
-#col-image-lg2 {
-    margin-top: 20vh;
-}
-
-.containerLeft {
-    text-align: right;
-}
-
-.containerRight {
-    text-align: left;
-
-}
-
-.iconService {
-    width: 50px;
-    height: 50px;
-    margin: auto;
-    margin-top: 15px;
-    color: rgb(149, 156, 156);
-    border: 3px solid aqua;
-    padding: 5px;
-    border-radius: 30px;
-}
-
-h5,
-p {
-    font-size: 1em;
 }
 
 /* Extra small devices (phones, 319px and down) */

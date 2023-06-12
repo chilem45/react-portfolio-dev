@@ -5,20 +5,21 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 import style from "./competences.scss";
 import PanelComponement from "./PanelComponent";
-
-import { ReactComponent as Php } from "./assets/php.svg";
-import { ReactComponent as Figma } from "./assets/figma.svg";
-import { ReactComponent as VueIcon } from "./assets/Vue.js.svg";
-import { ReactComponent as ReactIcon } from "./assets/react.svg";
-import { ReactComponent as JavaEE } from "./assets/java-icon.svg";
-import { ReactComponent as AdobeXd } from "./assets/adobe-xd.svg";
-import { ReactComponent as JqueryIcon } from "./assets/jquery.svg";
-import { ReactComponent as Bootstrap } from "./assets/bootstrap.svg";
-import { ReactComponent as HtmlCssJs } from "./assets/html_css_js.svg";
-import { ReactComponent as Springboot } from "./assets/springboot.svg";
 import Rowicon from "../services/composant_frangement/RowIcon";
 import ElementH5 from "../services/composant_frangement/ElementH5";
 import ElementP from "../services/composant_frangement/ElementP";
+import {
+  Php,
+  Figma,
+  VueIcon,
+  ReactIcon,
+  JavaEE,
+  AdobeXd,
+  JqueryIcon,
+  Bootstrap,
+  HtmlCssJs,
+  Springboot,
+} from "../../index";
 
 const Competences = () => {
   useEffect(() => {
@@ -26,11 +27,11 @@ const Competences = () => {
   }, [Aos.duration]);
   return (
     <Container fluid id="competences">
-      <Container fluid id="competences-01-container">
+      <Row fluid id="competences-01-container">
         <Row data-aos={"fade-down"}>
           <h4>Mes Compétences</h4>
         </Row>
-      </Container>
+      </Row>
       <Row className="containerRow">
         <Col className="containerLeft">
           <Row className="containerLeft-row">
@@ -179,19 +180,6 @@ const Competences = () => {
           </Row>
           <Row className="containerRight-row">
             <PanelComponement SrcImage={Php} niveau={60} label={"PHP"} />
-          </Row>
-          <Row className="containerRight-row-header">
-            <ElementH5 text={`UI DESIGN`} />
-          </Row>
-          <Row className="containerRight-row">
-            <PanelComponement SrcImage={Figma} niveau={70} label={"Figma"} />
-          </Row>
-          <Row className="containerRight-row">
-            <PanelComponement
-              SrcImage={AdobeXd}
-              niveau={70}
-              label={"Adobe XD"}
-            />
           </Row>
         </Col>
       </Row>

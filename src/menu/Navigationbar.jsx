@@ -7,6 +7,7 @@ import style from "./navigationStyles.scss";
 import { Icon } from "@iconify/react";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import { Link } from "react-router-dom";
 const Navigationbar = () => {
   const expand = "lg";
   const heightsIcon = 18;
@@ -24,75 +25,9 @@ const Navigationbar = () => {
 
   return (
     <>
-      <Navbar
-      fixed="bottom"
-        key={expand}
-        className={"mb-3" + style.navbar}
-        id="firstNavbar"
-        variant="dark"
-        expand={expand}
-      >
-        <Container fluid>
-          <Navbar.Brand href="#home">
-            <Nav class="nav justify-content-start" id="nav-01">
-              <NavLink  id="facebookIcon">
-                <Icon
-                  icon="line-md:facebook"
-                  hFlip={true}
-                  width={widthIcon}
-                  height={heightsIcon}
-                />
-              </NavLink>
-              <NavLink  id="instagramIcon">
-                <Icon
-                  icon="line-md:instagram"
-                  hFlip={true}
-                  width={widthIcon}
-                  height={heightsIcon}
-                />
-              </NavLink>
-              <NavLink  id="githubIcon">
-                <Icon
-                  icon="line-md:github-loop"
-                  hFlip={true}
-                  width={widthIcon}
-                  height={heightsIcon}
-                />
-              </NavLink>
-              <NavLink  id="linkedinIcon">
-                <Icon
-                  icon="line-md:linkedin"
-                  width={widthIcon}
-                  height={heightsIcon}
-                />
-              </NavLink>
-            </Nav>
-          </Navbar.Brand>
-          <Navbar.Text>
-            <Nav class="nav justify-content-end" id="nav-02">
-              <NavLink >
-                <Icon
-                  icon="material-symbols:phone-enabled-outline"
-                  width={widthIcon}
-                  height={heightsIcon}
-                  hFlip={true}
-                />
-                <span>+509 3128-2122</span>
-              </NavLink>
-              <NavLink >
-                <Icon
-                  icon="line-md:email"
-                  width={widthIcon}
-                  height={heightsIcon}
-                />
-                <span> chilemexantus@gmail.com</span>
-              </NavLink>
-            </Nav>
-          </Navbar.Text>
-        </Container>
-      </Navbar>
 
       <Navbar
+        sticky="top"
         key={expand}
         id="secondNavbar"
         className={"mb-3" + style.navbar}
@@ -114,25 +49,16 @@ const Navigationbar = () => {
             </Offcanvas.Header>
             <Offcanvas.Body>
               <Nav className="justify-content-end flex-grow-1 pe-3">
-                <NavLink evenKey="1" onClick={() => scrollToComponent("home")}>
+                <Nav.Link evenKey="1" as={Link} to="/">
                   Accueil
-                </NavLink>
-                <NavLink
-                  evenKey="2"
-                  onClick={() => scrollToComponent("competences")}
-                >
+                </Nav.Link>
+                <NavLink evenKey="2" as={Link} to="/competences">
                   Compétences
                 </NavLink>
-                <NavLink
-                  evenKey="3"
-                  onClick={() => scrollToComponent("services")}
-                >
+                <NavLink evenKey="3" as={Link} to="/services">
                   Services
                 </NavLink>
-                <NavLink
-                  evenKey="5"
-                  onClick={() => scrollToComponent("apropos")}
-                >
+                <NavLink evenKey="5" as={Link} to="/contact">
                   Contactez-moi
                 </NavLink>
               </Nav>

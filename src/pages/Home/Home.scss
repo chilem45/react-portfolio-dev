@@ -1,0 +1,170 @@
+@import "../../widgets/widget.scss";
+
+#home {
+    .containerRow {
+        height: 80vh;
+        margin: auto;
+        margin-top: 0.5%;
+        border: 5px solid beige;
+        text-align: center;
+
+        .containerLeft {
+            margin: auto;
+
+            .containerLeft-header {
+                h4 {
+                    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+                    color: rgb(255, 255, 255);
+                    font-size: 50px;
+                    text-shadow: -1px 1px 0 #000, 1px 1px 0 #000, 1px -1px 0 #000, -1px -1px 0 #000;
+                }
+
+                h5 {
+                    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+                    color: $primary;
+                    font-size: 35px;
+                    margin-top: 2vh;
+                }
+            }
+
+            .containerLeft-body {
+                margin-top: 5vh;
+                font-size: large;
+                position: relative;
+                overflow: hidden;
+                z-index: 1;
+
+                p {
+                    font-size: x-large;
+                }
+
+                .containerLeft-body-icon {
+                    #facebookIcon {
+                        color: #00a2ff;
+
+                        :hover {
+                            color: $third;
+                        }
+                    }
+
+                    #instagramIcon {
+                        color: #f704ff;
+
+                        :hover {
+                            color: $third;
+                        }
+                    }
+
+                    #linkedinIcon {
+                        color: rgb(0, 89, 255);
+
+                        :hover {
+                            color: $third;
+                        }
+                    }
+
+                    #githubIcon {
+                        color: rgb(255, 217, 0);
+
+                        :hover {
+                            color: $third;
+                        }
+                    }
+                }
+
+                .containerLeft-square {
+                    position: absolute;
+                    z-index: -1;
+
+                    #containerLeft-square-id {
+                        //transform: rotate(5deg);
+                    }
+                }
+            }
+        }
+
+        .containerRight {
+            margin: auto;
+            margin-top: 0vh;
+
+            .containerRight-photo {
+                margin: auto;
+                position: relative;
+                overflow: hidden;
+
+                .containerRight-square {
+                    position: absolute;
+                    right: -14vh;
+                    bottom: -1vh;
+                    transform: rotate(-8deg);
+                    z-index: 1;
+                }
+
+                .containerRight-photo-col-square {
+                    z-index: 2;
+                    width: 20vh;
+                    height: 20vh;
+                    border-radius: 20vh;
+                    position: absolute;
+                    margin-bottom: -5%;
+                    bottom: 0;
+                    background-color: $bg;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    .containerRight-photo-col-square-col {
+                        .containerRight-photo-col-square-col-icon {
+                            width: 100%;
+                        }
+                    }
+                }
+
+                .containerRight-photo-col-square-col-input-field {
+                    height: auto;
+                    margin-left: -15%;
+                    margin-top: 15%;
+                    .input-field {
+                        width: 1px;
+                        height:70%;
+                        content: "";
+                        background-color: #000;
+                        animation: blink 1s infinite;
+                    }
+                }
+            }
+
+            .containerRight-photo-col-image {
+                margin: auto;
+                margin-top: 10vh;
+                z-index: 2;
+
+                .containerRight-photo-col-image-image {
+                    width: 45vh;
+                    height: 45vh;
+                    border-radius: 45vh;
+                    border: 5px solid $primary;
+                    background-color: $bg;
+                }
+            }
+        }
+
+        .containerRight-contact {
+            margin-top: 1vh;
+        }
+    }
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
