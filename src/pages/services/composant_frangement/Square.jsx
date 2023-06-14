@@ -1,24 +1,38 @@
 import React from "react";
+import { motion } from "framer-motion";
 import "./Square.scss";
 
-const Square = ({id,size}) => {
-  const squareSize = size; // Taille du carré
-  const fragmentSize = 1; // Taille d'un fragment
+const Square = ({ id, size }) => {
+  const squareSize = size;
+  const fragmentSize = 1;
 
   const renderSquare = () => {
     const rows = [];
 
-    // Triangle supérieur
     for (let i = 1; i <= squareSize; i++) {
       const fragments = [];
 
-      const fragmentCount = i+0.5; // Nombre de fragments dans la ligne
+      const fragmentCount = i;
       for (let j = 1; j <= fragmentCount; j++) {
-        const isLastFragment = j === fragmentCount; // Vérifier si c'est le dernier fragment dans la ligne
-        const width = isLastFragment ? fragmentSize * 2 : fragmentSize; // Largeur du fragment
-        const height = fragmentSize; // Hauteur du fragment
+        const isLastFragment = j === fragmentCount;
+        const width = isLastFragment ? fragmentSize * 2 : fragmentSize;
+        const height = fragmentSize;
+        const color = `hsl(${(i + j) * 40}, 120%, 30%)`;
+
         fragments.push(
-          <div className="fragment" style={{ width, height }} key={j}></div>
+          <motion.div
+            className="fragment"
+            style={{ width, height, background: color }}
+            key={j}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{
+              duration: 1,
+              repeat: Infinity,
+              repeatType: "reverse",
+              delay: (i - 1) * 1 + j * 0.5,
+            }}
+          ></motion.div>
         );
       }
 
@@ -29,16 +43,18 @@ const Square = ({id,size}) => {
       );
     }
 
-    // Triangle inférieur (inversé)
     const reversedRows = [...rows].reverse();
 
-    // Combinaison des deux triangles pour former le carré
     const square = [...rows, ...reversedRows];
 
     return square;
   };
 
-  return <div id={id} className="square rotated">{renderSquare()}</div>;
+  return (
+    <div id={id} className="square rotated">
+      {renderSquare()}
+    </div>
+  );
 };
 
 export default Square;

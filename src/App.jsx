@@ -1,23 +1,43 @@
-import logo from "./logo.svg";
-import "./App.css";
+import React from "react";
+import { AnimatePresence, motion } from "framer-motion";
+import { BrowserRouter as Router, Route, Switch, useLocation } from "react-router-dom";
+
 import Navigationbar from "./menu/Navigationbar";
 import Services from "./pages/services/Services";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Competences from "./pages/competences/Competences";
-import React from "react";
 import Home from "./pages/Home/Home";
+import PageTransition from "./animation/PageTransition";
+
 function App() {
   return (
-    <div className="App">
-      <Router>
+    <Router>
+      <div className="App">
         <Navigationbar />
-        <Switch>
-          <Route exact path="/" component={Home} />
-          <Route path="/competences" component={Competences} />
-          <Route path="/contact" component={Services} />
-        </Switch>
-      </Router>
-    </div>
+        <Route
+          render={({ location }) => (
+            <AnimatePresence exitBeforeEnter>
+              <Switch location={location} key={location.pathname}>
+                <Route exact path="/react-portfolio-dev/">
+                  <PageTransition>
+                    <Home />
+                  </PageTransition>
+                </Route>
+                <Route exact path="/react-portfolio-dev/competences">
+                  <PageTransition>
+                    <Competences />
+                  </PageTransition>
+                </Route>
+                <Route exact path="/react-portfolio-dev/contact">
+                  <PageTransition>
+                    <Services />
+                  </PageTransition>
+                </Route>
+              </Switch>
+            </AnimatePresence>
+          )}
+        />
+      </div>
+    </Router>
   );
 }
 

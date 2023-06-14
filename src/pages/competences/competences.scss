@@ -2,10 +2,16 @@
 #competences {
     z-index: 1;
     text-align: justify;
-    margin: auto;
-    margin-top: 0.5%;
-    border: 5px solid beige;
     height: max-content;
+
+    .containerRow {
+        margin: auto;
+        margin-top: 11vh;
+        border: 5px solid beige;
+        position: relative;
+        overflow: hidden;
+        height: max-content;
+    }
 
 
     .containerRight-row-header {
@@ -30,7 +36,6 @@
     .containerLeft {
         height: auto;
         text-align: left;
-        margin-right: 4%;
 
         h5 {
             font-size: medium;
@@ -56,6 +61,17 @@
             border-radius: 30px;
             border: 2px solid aqua;
 
+        }
+    }
+
+    .containerLeft-square {
+        position: absolute;
+        z-index: 1;
+        top: -10%;
+        right: -45%;
+
+        #containerLeft-square-id {
+            transform: rotate(135deg);
         }
     }
 
@@ -87,12 +103,8 @@
         }
 
         .containerRow {
-            padding: 1%;
             text-align: start;
 
-            .containerRight-row {
-                margin-right: -30%;
-            }
 
             .containerLeft {
 
@@ -104,7 +116,11 @@
 
             .container-row-col-2-xm {
                 width: 10px;
-                margin-right: 20%;
+                margin-right: 5%;
+            }
+
+            .containerRight {
+                margin-left: -20%;
             }
 
             .containerLeft,
@@ -115,7 +131,6 @@
                 .containerLeft-row,
                 .containerRight-row {
                     height: 30%;
-                    margin-bottom: 5px;
 
                     .container-row-col-2-xm {
                         width: 10px;
@@ -148,8 +163,13 @@
         .containerRow {
             text-align: start;
 
+
             .containerRight-row {
                 margin-right: -10%;
+            }
+
+            .containerRight {
+                margin-left: -15%;
             }
 
             .containerLeft,
@@ -182,6 +202,7 @@
 
         .containerRow {
             text-align: justify;
+
 
             h4 {
                 font-size: 3em;
@@ -220,11 +241,7 @@
         }
 
         .containerRow {
-            margin-left: 1%;
 
-            .containerRight {
-                margin-top: -1.7%;
-            }
 
             .containerLeft {
 

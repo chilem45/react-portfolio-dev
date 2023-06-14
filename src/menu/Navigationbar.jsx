@@ -25,9 +25,9 @@ const Navigationbar = () => {
 
   return (
     <>
-
+    
       <Navbar
-        sticky="top"
+        fixed="top"
         key={expand}
         id="secondNavbar"
         className={"mb-3" + style.navbar}
@@ -49,16 +49,16 @@ const Navigationbar = () => {
             </Offcanvas.Header>
             <Offcanvas.Body>
               <Nav className="justify-content-end flex-grow-1 pe-3">
-                <Nav.Link evenKey="1" as={Link} to="/">
+                <NavLink evenKey="1" as={Link} to="/react-portfolio-dev/">
                   Accueil
-                </Nav.Link>
-                <NavLink evenKey="2" as={Link} to="/competences">
+                </NavLink>
+                <NavLink evenKey="2" as={Link} to="competences">
                   Compétences
                 </NavLink>
-                <NavLink evenKey="3" as={Link} to="/services">
+                <NavLink evenKey="3" as={Link} to="services">
                   Services
                 </NavLink>
-                <NavLink evenKey="5" as={Link} to="/contact">
+                <NavLink evenKey="5" as={Link} to="contact">
                   Contactez-moi
                 </NavLink>
               </Nav>

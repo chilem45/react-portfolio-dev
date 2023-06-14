@@ -20,6 +20,30 @@ const Home = () => {
       <Container fluid id="home">
         <Row className="containerRow">
           <Col className="containerLeft">
+            <Row className="containerLeft-photo">
+              <Col className="containerLeft-square">
+                <Square size={11} id="containerLeft-square-id" />
+              </Col>
+              <Col className="containerLeft-photo-col-image">
+                <Image
+                  className="containerLeft-photo-col-image-image"
+                  src={process.env.PUBLIC_URL + "/images/profile.png"}
+                />
+              </Col>
+              <Col className="containerLeft-photo-col-square">
+                <Row>
+                  <Col className="containerLeft-photo-col-square-col">
+                    <Terminal className="containerLeft-photo-col-square-col-icon" />
+                  </Col>
+                  <Col
+                    className="containerLeft-photo-col-square-col-input-field"
+                    xm={1}
+                  >
+                    <Row className="input-field"></Row>
+                  </Col>
+                </Row>
+              </Col>
+            </Row>
             <Row className="containerLeft-header">
               <h4>B.S Chilem EXANTUS</h4>
               <h5>Développeur Full Stack</h5>
@@ -37,7 +61,6 @@ const Home = () => {
                   <NavLink id="facebookIcon" href="h">
                     <Icon
                       icon="line-md:facebook"
-                      hFlip={true}
                       width={widthIcon}
                       height={heightsIcon}
                     />
@@ -45,7 +68,6 @@ const Home = () => {
                   <NavLink id="instagramIcon">
                     <Icon
                       icon="line-md:instagram"
-                      hFlip={true}
                       width={widthIcon}
                       height={heightsIcon}
                     />
@@ -53,7 +75,6 @@ const Home = () => {
                   <NavLink id="githubIcon">
                     <Icon
                       icon="line-md:github-loop"
-                      hFlip={true}
                       width={widthIcon}
                       height={heightsIcon}
                     />
@@ -67,9 +88,29 @@ const Home = () => {
                   </NavLink>
                 </Nav>
               </Row>
-              <Row className="containerLeft-square">
-                <Square size={5} id="containerLeft-square-id" />
-              </Row>
+            </Row>
+            <Row className="containerRight-contact">
+              <Nav class="nav justify-content-center" id="nav-02">
+                <NavLink>
+                  <Icon
+                    icon="material-symbols:phone-enabled-outline"
+                    width={widthIcon}
+                    height={heightsIcon}
+                    hFlip={true}
+                  />
+                  <span>+509 3128-2122</span>
+                  <span>/</span>
+                  <span>+509 4369-5462</span>
+                </NavLink>
+                <NavLink>
+                  <Icon
+                    icon="line-md:email"
+                    width={widthIcon}
+                    height={heightsIcon}
+                  />
+                  <span> chilemexantus@gmail.com</span>
+                </NavLink>
+              </Nav>
             </Row>
           </Col>
           <Col className="containerRight">
@@ -85,10 +126,16 @@ const Home = () => {
               </Col>
               <Col className="containerRight-photo-col-square">
                 <Row>
-                  <Col className="containerRight-photo-col-square-col" >
-                    <Terminal className="containerRight-photo-col-square-col-icon"/>
+                  <Col className="containerRight-photo-col-square-col">
+                    <Terminal className="containerRight-photo-col-square-col-icon" />
                   </Col>
-                  <Col className="containerRight-photo-col-square-col-input-field" lg={1} md={1} sm={1} >
+                  <Col
+                    className="containerRight-photo-col-square-col-input-field"
+                    lg={1}
+                    md={1}
+                    sm={1}
+                    xm={1}
+                  >
                     <Row className="input-field"></Row>
                   </Col>
                 </Row>
@@ -118,6 +165,9 @@ const Home = () => {
               </Nav>
             </Row>
           </Col>
+          <Row className="containerLeft-square">
+            <Square size={10} id="containerLeft-square-id" />
+          </Row>
         </Row>
       </Container>
     </>
