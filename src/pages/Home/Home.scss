@@ -61,7 +61,7 @@
 
 
     .containerRow {
-        height: 88vh;
+        height: 87.5vh;
         margin: auto;
         margin-top: 23%;
         border: 5px solid beige;
@@ -413,8 +413,10 @@
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
     #home {
+        position: relative;
         .containerRow {
             margin-top: 5.3%;
+            position: relative;
 
             h4 {
                 font-size: 6vh;
@@ -454,7 +456,7 @@
                     overflow: hidden;
 
                     p {
-                        font-size:larger;
+                        font-size: larger;
                         z-index: 2;
                     }
                 }
@@ -467,22 +469,23 @@
             .containerRight {
                 margin: auto;
                 margin-top: 0vh;
-    
+                position: relative;
+
                 .containerRight-photo {
                     margin: auto;
                     position: relative;
                     overflow: hidden;
-    
+
                     .containerRight-square {
                         position: absolute;
                         right: -14vh;
                         bottom: -1vh;
                         transform: rotate(-8deg);
-                        z-index: 1;
+                        z-index: 4;
                     }
-    
+
                     .containerRight-photo-col-square {
-                        z-index: 2;
+                        z-index: 4;
                         width: 20vh;
                         height: 20vh;
                         border-radius: 20vh;
@@ -493,18 +496,18 @@
                         display: flex;
                         justify-content: center;
                         align-items: center;
-    
+
                         .containerRight-photo-col-square-col {
                             .containerRight-photo-col-square-col-icon {
                                 width: 100%;
                             }
                         }
                     }
-    
+
                     .containerRight-photo-col-square-col-input-field {
                         margin-left: -15%;
                         margin-top: 15%;
-    
+
                         .input-field {
                             width: 1px;
                             height: 70%;
@@ -513,13 +516,13 @@
                             animation: blink 1s infinite;
                         }
                     }
-    
-    
+
+
                     .containerRight-photo-col-image {
                         margin: auto;
                         margin-top: 10vh;
-                        z-index: 2;
-    
+                        z-index: 4;
+
                         .containerRight-photo-col-image-image {
                             width: 45vh;
                             height: 45vh;
@@ -529,8 +532,8 @@
                         }
                     }
                 }
-    
-    
+
+
                 .containerRight-contact {
                     margin-top: 1vh;
                 }

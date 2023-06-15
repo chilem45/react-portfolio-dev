@@ -1,10 +1,15 @@
 import React from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { BrowserRouter as Router, Route, Switch, useLocation } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+  useLocation,
+} from "react-router-dom";
 
 import Navigationbar from "./menu/Navigationbar";
-import Services from "./pages/services/Services";
 import Competences from "./pages/competences/Competences";
+import Contact from "./pages/contact/Contact";
 import Home from "./pages/Home/Home";
 import PageTransition from "./animation/PageTransition";
 
@@ -16,7 +21,7 @@ function App() {
         <Route
           render={({ location }) => (
             <AnimatePresence exitBeforeEnter>
-              <Switch location={location} key={location.pathname}>
+              <Switch location={location} key={location.pathname} >
                 <Route exact path="/react-portfolio-dev/">
                   <PageTransition>
                     <Home />
@@ -29,7 +34,7 @@ function App() {
                 </Route>
                 <Route exact path="/react-portfolio-dev/contact">
                   <PageTransition>
-                    <Services />
+                    <Contact />
                   </PageTransition>
                 </Route>
               </Switch>

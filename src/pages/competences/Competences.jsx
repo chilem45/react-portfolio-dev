@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { Container, Row, Col, Card } from "react-bootstrap";
-import { Icon } from "@iconify/react";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import style from "./competences.scss";

@@ -13,23 +13,10 @@
     height: 10vh;
     font-size: 18px;
     font-weight: bold;
+    text-align: center;
 }
 
-
-
-#firstNavbar {
-    #nav-02 {
-        margin-left: -5%;
-        a {
-            color: black;
-            margin-left: -1%;
-            
-        }
-    }
-    #nav-01 {
-        a {
-            margin-left: -10%;
-        }
-    }
-
+.active {
+    background-color: $primary;
+    color: white !important;
 }

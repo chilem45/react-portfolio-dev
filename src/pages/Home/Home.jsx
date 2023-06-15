@@ -89,29 +89,6 @@ const Home = () => {
                 </Nav>
               </Row>
             </Row>
-            <Row className="containerRight-contact">
-              <Nav class="nav justify-content-center" id="nav-02">
-                <NavLink>
-                  <Icon
-                    icon="material-symbols:phone-enabled-outline"
-                    width={widthIcon}
-                    height={heightsIcon}
-                    hFlip={true}
-                  />
-                  <span>+509 3128-2122</span>
-                  <span>/</span>
-                  <span>+509 4369-5462</span>
-                </NavLink>
-                <NavLink>
-                  <Icon
-                    icon="line-md:email"
-                    width={widthIcon}
-                    height={heightsIcon}
-                  />
-                  <span> chilemexantus@gmail.com</span>
-                </NavLink>
-              </Nav>
-            </Row>
           </Col>
           <Col className="containerRight">
             <Row className="containerRight-photo">
@@ -140,29 +117,6 @@ const Home = () => {
                   </Col>
                 </Row>
               </Col>
-            </Row>
-            <Row className="containerRight-contact">
-              <Nav class="nav justify-content-center" id="nav-02">
-                <NavLink>
-                  <Icon
-                    icon="material-symbols:phone-enabled-outline"
-                    width={widthIcon}
-                    height={heightsIcon}
-                    hFlip={true}
-                  />
-                  <span>+509 3128-2122</span>
-                  <span>/</span>
-                  <span>+509 4369-5462</span>
-                </NavLink>
-                <NavLink>
-                  <Icon
-                    icon="line-md:email"
-                    width={widthIcon}
-                    height={heightsIcon}
-                  />
-                  <span> chilemexantus@gmail.com</span>
-                </NavLink>
-              </Nav>
             </Row>
           </Col>
           <Row className="containerLeft-square">

@@ -1,32 +1,18 @@
-import React, { useEffect } from "react";
-import Container from "react-bootstrap/Container";
-import { Nav, NavLink } from "react-bootstrap";
-import Navbar from "react-bootstrap/Navbar";
+import React, { useState } from "react";
+import { Container, Nav, NavLink, Navbar } from "react-bootstrap";
+import { Link, useLocation } from "react-router-dom";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import style from "./navigationStyles.scss";
-import { Icon } from "@iconify/react";
-import Aos from "aos";
-import "aos/dist/aos.css";
-import { Link } from "react-router-dom";
+
 const Navigationbar = () => {
   const expand = "lg";
-  const heightsIcon = 18;
-  const widthIcon = 18;
-
-  const scrollToComponent = (id) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-  };
-  useEffect(() => {
-    Aos.init({ duration: 1000 });
-  }, []);
+  const location = useLocation();
+  const [selectedNavLink, setSelectedNavLink] = useState("");
 
   return (
     <>
-    
       <Navbar
+      location={location}
         fixed="top"
         key={expand}
         id="secondNavbar"
@@ -35,7 +21,7 @@ const Navigationbar = () => {
         expand={expand}
       >
         <Container fluid>
-          <Navbar.Brand href="#">B S C E</Navbar.Brand>
+          <Navbar.Brand href="/react-portfolio-dev/">B S C E</Navbar.Brand>
           <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
           <Navbar.Offcanvas
             id={`offcanvasNavbar-expand-${expand}`}
@@ -49,16 +35,31 @@ const Navigationbar = () => {
             </Offcanvas.Header>
             <Offcanvas.Body>
               <Nav className="justify-content-end flex-grow-1 pe-3">
-                <NavLink evenKey="1" as={Link} to="/react-portfolio-dev/">
+                <NavLink
+                  eventKey="1"
+                  as={Link}
+                  to="/react-portfolio-dev/"
+                  onClick={() => setSelectedNavLink("accueil") }
+                  active={selectedNavLink === "accueil"}
+                >
                   Accueil
                 </NavLink>
-                <NavLink evenKey="2" as={Link} to="competences">
+                <NavLink
+                  eventKey="2"
+                  as={Link}
+                  to="competences"
+                  onClick={() => setSelectedNavLink("competences")}
+                  active={selectedNavLink === "competences"}
+                >
                   Compétences
                 </NavLink>
-                <NavLink evenKey="3" as={Link} to="services">
-                  Services
-                </NavLink>
-                <NavLink evenKey="5" as={Link} to="contact">
+                <NavLink
+                  eventKey="5"
+                  as={Link}
+                  to="contact"
+                  onClick={() => setSelectedNavLink("contact")}
+                  active={selectedNavLink === "contact"}
+                >
                   Contactez-moi
                 </NavLink>
               </Nav>

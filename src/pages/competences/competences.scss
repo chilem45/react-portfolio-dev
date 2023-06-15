@@ -2,15 +2,14 @@
 #competences {
     z-index: 1;
     text-align: justify;
-    height: max-content;
 
     .containerRow {
         margin: auto;
         margin-top: 11vh;
         border: 5px solid beige;
         position: relative;
-        overflow: hidden;
-        height: max-content;
+        overflow-x: hidden;
+        height: 87.5vh;
     }
 
 
@@ -38,7 +37,6 @@
         text-align: left;
 
         h5 {
-            font-size: medium;
             color: #000000;
         }
 
