@@ -15,6 +15,7 @@ export { ReactComponent as Bootstrap } from "./assets/bootstrap.svg";
 export { ReactComponent as HtmlCssJs } from "./assets/html_css_js.svg";
 export { ReactComponent as Springboot } from "./assets/springboot.svg";
 export { ReactComponent as Terminal } from "./assets/terminal.svg";
+export { ReactComponent as LogoSite } from "./assets/logo-site.svg";
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>

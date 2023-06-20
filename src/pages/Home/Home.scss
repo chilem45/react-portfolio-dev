@@ -93,9 +93,9 @@
 
                 .containerLeft-photo-col-square {
                     z-index: 2;
-                    width: 15vh;
-                    height: 15vh;
-                    border-radius: 15vh;
+                    width: 20vh;
+                    height: 20vh;
+                    border-radius: 20vh;
                     position: absolute;
                     margin-bottom: -5%;
                     bottom: 0;
@@ -104,26 +104,9 @@
                     justify-content: center;
                     align-items: center;
 
-                    .containerLeft-photo-col-square-col {
 
-                        .containerLeft-photo-col-square-col-icon {
-                            width: 100%;
-                            margin-left: 90%;
-                        }
-                    }
-
-                    .containerLeft-photo-col-square-col-input-field {
-
-                        margin-top: 10%;
-                        margin-left: 1vh;
-
-                        .input-field {
-                            width: 1px;
-                            height: 70%;
-                            content: "";
-                            background-color: #000;
-                            animation: blink 1s infinite;
-                        }
+                    .containerLeft-photo-col-square-col-icon {
+                        width: 100%;
                     }
                 }
 
@@ -152,88 +135,17 @@
             }
 
             .containerLeft-body-icon {
+                
                 z-index: 3;
             }
 
-        }
+         }
 
         .containerLeft-square {
             position: absolute;
             z-index: 1;
             top: -10%;
             left: -45%;
-        }
-
-        .containerRight {
-            margin: auto;
-            margin-top: 0vh;
-
-            .containerRight-photo {
-                margin: auto;
-                position: relative;
-                overflow: hidden;
-
-                .containerRight-square {
-                    position: absolute;
-                    right: -14vh;
-                    bottom: -1vh;
-                    transform: rotate(-8deg);
-                    z-index: 1;
-                }
-
-                .containerRight-photo-col-square {
-                    z-index: 2;
-                    width: 20vh;
-                    height: 20vh;
-                    border-radius: 20vh;
-                    position: absolute;
-                    margin-bottom: -5%;
-                    bottom: 0;
-                    background-color: $bg;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-
-                    .containerRight-photo-col-square-col {
-                        .containerRight-photo-col-square-col-icon {
-                            width: 100%;
-                        }
-                    }
-                }
-
-                .containerRight-photo-col-square-col-input-field {
-                    margin-left: -15%;
-                    margin-top: 15%;
-
-                    .input-field {
-                        width: 1px;
-                        height: 70%;
-                        content: "";
-                        background-color: #000;
-                        animation: blink 1s infinite;
-                    }
-                }
-
-
-                .containerRight-photo-col-image {
-                    margin: auto;
-                    margin-top: 10vh;
-                    z-index: 2;
-
-                    .containerRight-photo-col-image-image {
-                        width: 45vh;
-                        height: 45vh;
-                        border-radius: 45vh;
-                        border: 5px solid #d54848;
-                        background-color: $bg;
-                    }
-                }
-            }
-
-
-            .containerRight-contact {
-                margin-top: 1vh;
-            }
         }
     }
 }
@@ -284,6 +196,9 @@
                     p {
                         font-size: medium;
                         z-index: 2;
+                    }
+                    .containerLeft-body-icon {
+                        margin-bottom: 6vh;
                     }
                 }
             }
@@ -338,6 +253,9 @@
                     p {
                         font-size: medium;
                         z-index: 2;
+                    }
+                    .containerLeft-body-icon {
+                        margin-bottom: 6vh;
                     }
                 }
             }
@@ -414,6 +332,7 @@
 @media only screen and (min-width: 992px) {
     #home {
         position: relative;
+
         .containerRow {
             margin-top: 5.3%;
             position: relative;
@@ -478,57 +397,37 @@
 
                     .containerRight-square {
                         position: absolute;
-                        right: -14vh;
-                        bottom: -1vh;
+                        right: -30vh;
+                        top: 0;
                         transform: rotate(-8deg);
                         z-index: 4;
                     }
 
                     .containerRight-photo-col-square {
                         z-index: 4;
-                        width: 20vh;
-                        height: 20vh;
-                        border-radius: 20vh;
+                        width: 40vh;
+                        height: 40vh;
+                        border-radius: 40vh;
                         position: absolute;
-                        margin-bottom: -5%;
+                        margin-bottom: -2vh;
                         bottom: 0;
+                        left: 0;
                         background-color: $bg;
                         display: flex;
                         justify-content: center;
                         align-items: center;
-
-                        .containerRight-photo-col-square-col {
-                            .containerRight-photo-col-square-col-icon {
-                                width: 100%;
-                            }
-                        }
-                    }
-
-                    .containerRight-photo-col-square-col-input-field {
-                        margin-left: -15%;
-                        margin-top: 15%;
-
-                        .input-field {
-                            width: 1px;
-                            height: 70%;
-                            content: "";
-                            background-color: #000;
-                            animation: blink 1s infinite;
-                        }
                     }
 
 
                     .containerRight-photo-col-image {
                         margin: auto;
-                        margin-top: 10vh;
                         z-index: 4;
 
                         .containerRight-photo-col-image-image {
-                            width: 45vh;
-                            height: 45vh;
-                            border-radius: 45vh;
-                            border: 5px solid #d54848;
+                            width: 60vh;
+                            height: 86vh;
                             background-color: $bg;
+                            border-bottom-left-radius: 15vh;
                         }
                     }
                 }

@@ -20,7 +20,6 @@ const SlowProgressBar = ({ value, className, id }) => {
   }, [value]);
   return (
     <ProgressBar
-    variant="danger"
       now={progress}
       visuallyHidden
       label={`${progress}%`}

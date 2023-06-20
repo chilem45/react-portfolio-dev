@@ -1,21 +1,14 @@
 @import "../widgets/widget.scss";
-
-.navbar {
-    z-index: 999;
-    height: 5vh;
-
-}
-
-
-
 #secondNavbar {
-    background-color: $primary;
+    background: $primary_bg;
     height: 10vh;
     font-size: 18px;
-    font-weight: bold;
     text-align: center;
-}
 
+.navbar-brand{
+  font-size: 12px;
+}
+}
 .active {
     background-color: $primary;
     color: white !important;

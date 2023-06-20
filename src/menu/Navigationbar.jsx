@@ -12,7 +12,7 @@ const Navigationbar = () => {
   return (
     <>
       <Navbar
-      location={location}
+        location={location}
         fixed="top"
         key={expand}
         id="secondNavbar"
@@ -21,7 +21,9 @@ const Navigationbar = () => {
         expand={expand}
       >
         <Container fluid>
-          <Navbar.Brand href="/react-portfolio-dev/">B S C E</Navbar.Brand>
+          <Navbar.Brand  href="/react-portfolio-dev/" className="navbar-brand">
+          Développeur Full Stack
+          </Navbar.Brand>
           <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
           <Navbar.Offcanvas
             id={`offcanvasNavbar-expand-${expand}`}
@@ -39,7 +41,7 @@ const Navigationbar = () => {
                   eventKey="1"
                   as={Link}
                   to="/react-portfolio-dev/"
-                  onClick={() => setSelectedNavLink("accueil") }
+                  onClick={() => setSelectedNavLink("accueil")}
                   active={selectedNavLink === "accueil"}
                 >
                   Accueil
@@ -47,7 +49,7 @@ const Navigationbar = () => {
                 <NavLink
                   eventKey="2"
                   as={Link}
-                  to="competences"
+                  to="/react-portfolio-dev/competences"
                   onClick={() => setSelectedNavLink("competences")}
                   active={selectedNavLink === "competences"}
                 >
@@ -56,7 +58,7 @@ const Navigationbar = () => {
                 <NavLink
                   eventKey="5"
                   as={Link}
-                  to="contact"
+                  to="/react-portfolio-dev/contact"
                   onClick={() => setSelectedNavLink("contact")}
                   active={selectedNavLink === "contact"}
                 >

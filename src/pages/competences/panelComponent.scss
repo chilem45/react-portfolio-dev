@@ -2,20 +2,25 @@
 
 .panelComponent {
     .panelComponent-col-progressBar-bar {
-        background-color: $primary;
+        background: $primary_bg2;
         height: 6vh;
         border-bottom-right-radius: 9vh;
         border-top-right-radius: 9vh;
         z-index: 1;
+
+        .progress-bar {
+            background: $primary;
+        }
     }
 
     .panelComponent-col-label {
         z-index: 2;
-        background-color: $secondary;
+        background:rgb(225, 176, 112);
+        border: 1px solid black;
         border-right: 3px double rgb(243, 40, 40);
 
         p {
-            color: aliceblue;
+            color: black;
             font-family: Menlo, Monaco, Consolas, 'Courier New',
                 monospace;
         }
@@ -108,8 +113,9 @@
             margin: auto;
             width: 40%;
             margin-left: -3%;
-             margin-left: -5%;
-             .panelComponent-col-progressBar-bar {
+            margin-left: -5%;
+
+            .panelComponent-col-progressBar-bar {
                 width: 140%;
             }
         }
@@ -182,9 +188,10 @@
             margin-left: -0.5%;
             margin-right: -3%;
             line-height: 6vh;
+
             p {
                 padding-left: 5%;
-                    }
+            }
 
         }
 

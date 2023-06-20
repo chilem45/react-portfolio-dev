@@ -3,6 +3,7 @@ import style from "./Home.scss";
 import Square from "../services/composant_frangement/Square";
 import { Terminal } from "../../index";
 import { Icon } from "@iconify/react";
+import { LogoSite } from "../../index";
 import {
   Container,
   NavLink,
@@ -31,17 +32,10 @@ const Home = () => {
                 />
               </Col>
               <Col className="containerLeft-photo-col-square">
-                <Row>
-                  <Col className="containerLeft-photo-col-square-col">
-                    <Terminal className="containerLeft-photo-col-square-col-icon" />
-                  </Col>
-                  <Col
-                    className="containerLeft-photo-col-square-col-input-field"
-                    xm={1}
-                  >
-                    <Row className="input-field"></Row>
-                  </Col>
-                </Row>
+                <Image
+                  className="containerLeft-photo-col-square-col-icon"
+                  src={process.env.PUBLIC_URL + "/images/logo site.png"}
+                />
               </Col>
             </Row>
             <Row className="containerLeft-header">
@@ -50,11 +44,11 @@ const Home = () => {
             </Row>
             <Row className="containerLeft-body">
               <p>
-                Jeune de 25 ans passionné par le monde du codage, de la
-                programmation et de l'informatique, je m'intéresse à tous ces
-                domaines. Je consacre un nombre d'heures indéterminé pour
-                élaborer la meilleure solution possible dans la réalisation de
-                tous projets qui me font face.
+                Jeune passionné par le monde du codage, de la programmation et
+                de l'informatique, je m'intéresse à tous ces domaines. Je
+                consacre un nombre d'heures indéterminé pour élaborer la
+                meilleure solution possible dans la réalisation de tous projets
+                qui me font face.
               </p>
               <Row className="containerLeft-body-icon">
                 <Nav className="nav justify-content-center">
@@ -93,7 +87,7 @@ const Home = () => {
           <Col className="containerRight">
             <Row className="containerRight-photo">
               <Col className="containerRight-square">
-                <Square size={11} id="containerRight-square-id" />
+                <Square size={15} id="containerRight-square-id" />
               </Col>
               <Col className="containerRight-photo-col-image">
                 <Image
@@ -103,18 +97,7 @@ const Home = () => {
               </Col>
               <Col className="containerRight-photo-col-square">
                 <Row>
-                  <Col className="containerRight-photo-col-square-col">
-                    <Terminal className="containerRight-photo-col-square-col-icon" />
-                  </Col>
-                  <Col
-                    className="containerRight-photo-col-square-col-input-field"
-                    lg={1}
-                    md={1}
-                    sm={1}
-                    xm={1}
-                  >
-                    <Row className="input-field"></Row>
-                  </Col>
+                  <LogoSite />
                 </Row>
               </Col>
             </Row>
