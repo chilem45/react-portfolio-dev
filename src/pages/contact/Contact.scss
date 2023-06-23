@@ -62,6 +62,9 @@
 
         .containerRight {
             text-align: start;
+            .label_required {
+                color: red;
+            }
 
             .containerRight-content {
                 margin: auto;
