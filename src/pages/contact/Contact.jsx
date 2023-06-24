@@ -6,14 +6,17 @@ import { useForm } from "react-hook-form";
 import Rowicon from "../services/composant_frangement/RowIcon";
 import ElementH5 from "../services/composant_frangement/ElementH5";
 import ElementP from "../services/composant_frangement/ElementP";
-import { Container, Row, Col, Form, Button } from "react-bootstrap";
+import { Container, Row, Col, Form, Button, Alert } from "react-bootstrap";
+
 import handler from "./api/contact";
 import AlertMessage from "./AlertMessage";
 const Contact = () => {
   const widthIcon = 19;
   const heightsIcon = 19;
   const [isLoding, setIsLoding] = useState(false);
-  const[show,setShow] = useState(true);
+  const [message, setMessage] = useState("");
+  const [variant, setVariant] = useState("danger");
+  const [show, setShow] = useState(true);
   const formType = useRef({});
   const {
     register,
@@ -21,35 +24,35 @@ const Contact = () => {
     formState: { errors },
   } = useForm();
 
-  const onSubmitHandle = (e) => {
+  const onSubmitHandle = (data) => {
     const serviceID = "service_cqlfi1b";
     const templateID = "template_rtjoffu";
     const public_key = "Di2k4Ptq21V9Mcnur";
-    e.preventDefault();
+    data = {
+      ...data,
+      service_id: serviceID,
+      template_id: templateID,
+      user_id: public_key,
+    };
     if (!isLoding) {
       setIsLoding(true);
-      emailjs
-        .sendForm(serviceID, templateID, e.target, public_key)
+      fetch("https://api.emailjs.com/api/v1.0/email/send-form", {
+        type: "POST",
+        data: data,
+        contentType: false, // auto-detection
+        processData: false,
+      })
         .then((result) => {
           setIsLoding(false);
           formType.current.reset();
-          console.log(result.text);
+          setMessage("email sending successfully");
         })
         .catch((error) => {
-          console.error(error.text);
+          setMessage(error.text);
+          setVariant("danger");
         });
     }
   };
-
-    if (show) {
-    return (
-        <div id="containerAlert">
-      <Alert variant={variant} onClose={() => setShow(false)} dismissible>
-        <Alert.Heading>{message}</Alert.Heading>
-      </Alert>
-      </div>
-    );
-  }
   return (
     <>
       <Container fluid id="contact">
@@ -109,7 +112,7 @@ const Contact = () => {
                 <h4>Envoie moi un email </h4>
               </Row>
               <Row className="containerRight-body">
-                <Form onSubmit={onSubmitHandle} ref={formType}>
+                <Form onSubmit={handleSubmit(onSubmitHandle)} ref={formType}>
                   <Form.Group
                     className="mb-3"
                     controlId="exampleForm.ControlInput1"
@@ -204,10 +207,10 @@ const Contact = () => {
                 </Form>
               </Row>
             </Row>
+            <AlertMessage message={message} show={show} variant={variant} />
           </Col>
         </Row>
       </Container>
-      <AlertMessage />
     </>
   );
 };

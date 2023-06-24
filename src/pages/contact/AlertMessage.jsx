@@ -2,19 +2,20 @@ import { useState } from "react";
 import Alert from "react-bootstrap/Alert";
 import Button from "react-bootstrap/Button";
 import styles from "./AlertMessage.scss";
-const AlertMessage = ({ message, variant }) => {
-  const [show, setShow] = useState(true);
+const AlertMessage = ({ message, variant, show }) => {
+  const [Show, setShow] = useState(show);
 
   if (show) {
     return (
-        <div id="containerAlert">
-      <Alert variant={variant} onClose={() => setShow(false)} dismissible>
-        <Alert.Heading>{message}</Alert.Heading>
-      </Alert>
-      </div>
+        <Alert id="containerAlert" variant={variant} onClose={() => setShow(true)} dismissible>
+          <Alert.Heading>Information sur l'envoie</Alert.Heading>
+      <hr />
+      <p className="mb-0">
+      {message}
+      </p>
+        </Alert>
     );
   }
-  return <Button onClick={() => setShow(true)}>Show Alert</Button>;
 };
 
 export default AlertMessage;

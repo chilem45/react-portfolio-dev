@@ -1,3 +1,7 @@
-#containerAlert{
-    position: absolute;
+#containerAlert {
+    z-index: 9999;
+    margin-top: -80vh;
+    p{
+        z-index: 99999;
+    }
 }
