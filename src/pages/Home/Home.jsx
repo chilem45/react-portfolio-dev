@@ -14,8 +14,8 @@ import {
   Ratio,
 } from "react-bootstrap";
 const Home = () => {
-  const widthIcon = 19;
-  const heightsIcon = 19;
+  const widthIcon = 25;
+  const heightsIcon = 25;
   return (
     <>
       <Container fluid id="home">
@@ -52,28 +52,31 @@ const Home = () => {
               </p>
               <Row className="containerLeft-body-icon">
                 <Nav className="nav justify-content-center">
-                  <NavLink id="facebookIcon" href="h">
+                  <NavLink id="telegramIcon" href="https://t.me/B_S_C45">
                     <Icon
-                      icon="line-md:facebook"
+                      icon="jam:telegram"
                       width={widthIcon}
                       height={heightsIcon}
                     />
                   </NavLink>
-                  <NavLink id="instagramIcon">
+                  <NavLink id="whatsappIcon" href="https://wa.me/+50931282122">
                     <Icon
-                      icon="line-md:instagram"
+                      icon="bi:whatsapp" 
                       width={widthIcon}
                       height={heightsIcon}
                     />
                   </NavLink>
-                  <NavLink id="githubIcon">
+                  <NavLink id="githubIcon" href="https://github.com/chilem45">
                     <Icon
-                      icon="line-md:github-loop"
+                      icon="teenyicons:github-solid"
                       width={widthIcon}
                       height={heightsIcon}
                     />
                   </NavLink>
-                  <NavLink id="linkedinIcon">
+                  <NavLink
+                    id="linkedinIcon"
+                    href="http://www.linkedin.com/in/chilem-exantus-29069b147"
+                  >
                     <Icon
                       icon="line-md:linkedin"
                       width={widthIcon}

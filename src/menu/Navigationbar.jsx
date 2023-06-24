@@ -7,7 +7,23 @@ import style from "./navigationStyles.scss";
 const Navigationbar = () => {
   const expand = "lg";
   const location = useLocation();
-  const [selectedNavLink, setSelectedNavLink] = useState("");
+  const [selectedNavLink, setSelectedNavLink] = useState("accueil");
+  const [showOffcanvas, setShowOffcanvas] = useState(false);
+
+  const handleNavLinkClick = (navLink) => {
+    setSelectedNavLink(navLink);
+    setTimeout(() => {
+      setShowOffcanvas(false);
+    }, 800);
+  };
+
+  const handleOffcanvasClose = () => {
+    setShowOffcanvas(false);
+  };
+
+  const handleOffcanvasShow = () => {
+    setShowOffcanvas(true);
+  };
 
   return (
     <>
@@ -21,11 +37,16 @@ const Navigationbar = () => {
         expand={expand}
       >
         <Container fluid>
-          <Navbar.Brand  href="/react-portfolio-dev/" className="navbar-brand">
-          Développeur Full Stack
+          <Navbar.Brand href="/react-portfolio-dev/" className="navbar-brand">
+            Développeur Full Stack
           </Navbar.Brand>
-          <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
+          <Navbar.Toggle
+            aria-controls={`offcanvasNavbar-expand-${expand}`}
+            onClick={handleOffcanvasShow}
+          />
           <Navbar.Offcanvas
+            show={showOffcanvas}
+            onHide={handleOffcanvasClose}
             id={`offcanvasNavbar-expand-${expand}`}
             aria-labelledby={`offcanvasNavbarLabel-expand-${expand}`}
             placement="end"
@@ -41,7 +62,7 @@ const Navigationbar = () => {
                   eventKey="1"
                   as={Link}
                   to="/react-portfolio-dev/"
-                  onClick={() => setSelectedNavLink("accueil")}
+                  onClick={() => handleNavLinkClick("accueil")}
                   active={selectedNavLink === "accueil"}
                 >
                   Accueil
@@ -50,7 +71,7 @@ const Navigationbar = () => {
                   eventKey="2"
                   as={Link}
                   to="/react-portfolio-dev/competences"
-                  onClick={() => setSelectedNavLink("competences")}
+                  onClick={() => handleNavLinkClick("competences")}
                   active={selectedNavLink === "competences"}
                 >
                   Compétences
@@ -59,7 +80,7 @@ const Navigationbar = () => {
                   eventKey="5"
                   as={Link}
                   to="/react-portfolio-dev/contact"
-                  onClick={() => setSelectedNavLink("contact")}
+                  onClick={() => handleNavLinkClick("contact")}
                   active={selectedNavLink === "contact"}
                 >
                   Contactez-moi

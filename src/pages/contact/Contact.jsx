@@ -16,7 +16,7 @@ const Contact = () => {
   const [isLoding, setIsLoding] = useState(false);
   const [message, setMessage] = useState("");
   const [variant, setVariant] = useState("danger");
-  const [show, setShow] = useState(true);
+  const [show, setShow] = useState(false);
   const formType = useRef({});
   const {
     register,
@@ -28,7 +28,7 @@ const Contact = () => {
     const serviceID = "service_cqlfi1b";
     const templateID = "template_rtjoffu";
     const public_key = "Di2k4Ptq21V9Mcnur";
-    data = {
+    const templateParams = {
       ...data,
       service_id: serviceID,
       template_id: templateID,
@@ -36,23 +36,24 @@ const Contact = () => {
     };
     if (!isLoding) {
       setIsLoding(true);
-      fetch("https://api.emailjs.com/api/v1.0/email/send-form", {
-        type: "POST",
-        data: data,
-        contentType: false, // auto-detection
-        processData: false,
-      })
-        .then((result) => {
+      emailjs
+        .send(serviceID, templateID, data, public_key)
+        .then((response) => {
           setIsLoding(false);
           formType.current.reset();
-          setMessage("email sending successfully");
+          console.log(response);
+          setMessage("Email envoyé avec succès");
+          setShow(true);
+          setVariant("success");
         })
         .catch((error) => {
-          setMessage(error.text);
+          setMessage(error);
+          setShow(true);
           setVariant("danger");
         });
     }
   };
+
   return (
     <>
       <Container fluid id="contact">

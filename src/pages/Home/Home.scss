@@ -27,7 +27,7 @@
         color: $primary;
     }
 
-    #facebookIcon {
+    #telegramIcon {
         color: #00a2ff;
 
         :hover {
@@ -35,13 +35,14 @@
         }
     }
 
-    #instagramIcon {
-        color: #f704ff;
+    #whatsappIcon {
+        color: #37a55b;
 
         :hover {
             color: $third;
         }
     }
+
 
     #linkedinIcon {
         color: rgb(0, 89, 255);
