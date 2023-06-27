@@ -48,7 +48,7 @@ const Contact = () => {
         })
         .catch((error) => {
           setMessage(error);
-          setShow(true);
+          setShow(false);
           setVariant("danger");
         });
     }
