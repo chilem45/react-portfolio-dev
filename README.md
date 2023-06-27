@@ -23,7 +23,6 @@ Le portfolio est accessible en ligne via le lien suivant : [https://chilem45.git
 - React
 - React Router pour la navigation
 - React Bootstrap pour les composants UI
-- React Icons pour les icônes
 - Sass pour la gestion des styles
 
 ## 📞 Contact
